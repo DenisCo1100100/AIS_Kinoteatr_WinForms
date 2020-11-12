@@ -1,0 +1,10 @@
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.exe.config
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.exe
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.pdb
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.csprojAssemblyReference.cache
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.Form1.resources
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.Properties.Resources.resources
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.csproj.GenerateResource.cache
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.csproj.CoreCompileInputs.cache
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.exe
+D:\Шарага\Лабы\ТРПО\АИС Кинотеатр\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.pdb
