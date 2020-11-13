@@ -25,8 +25,6 @@ namespace AIS_Kinoteatr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            label4.Text = Login;
-            label5.Text = Password;
         }
     }
 }
