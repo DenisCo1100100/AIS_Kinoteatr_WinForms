@@ -15,14 +15,5 @@ namespace AIS_Kinoteatr
         {
             Login = "denis"; // тут вытащим из БД
         }
-
-        public bool CheckUser()
-        {
-            if (Login == Authorization.)
-            {
-
-            }
-        }
-
     }
 }

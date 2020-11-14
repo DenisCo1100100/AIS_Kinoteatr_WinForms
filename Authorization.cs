@@ -7,10 +7,13 @@ namespace AIS_Kinoteatr
     {
         public string Login { get; set; }
         public string Password { get; set; }
+        Identification identification;
+
 
         public Authorization()
         {
             InitializeComponent();
+            identification = new Identification();
         }
 
         private void loginTextBox_TextChanged(object sender, EventArgs e)
@@ -25,6 +28,11 @@ namespace AIS_Kinoteatr
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (identification.Login == Login)
+            {
+                Cinema cinema = new Cinema();
+                cinema.ShowDialog();
+            }
         }
     }
 }
