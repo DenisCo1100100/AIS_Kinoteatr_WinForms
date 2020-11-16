@@ -16,7 +16,7 @@ D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.csproj.GenerateResourc
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.csproj.CoreCompileInputs.cache
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.exe
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.pdb
-D:\Serious Projects\AIS_Kinoteatr\bin\Debug\UserAccount\RegisteredUsers.accdb
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.exe.config
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.exe
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\AIS_Kinoteatr.pdb
+D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.Registration.resources

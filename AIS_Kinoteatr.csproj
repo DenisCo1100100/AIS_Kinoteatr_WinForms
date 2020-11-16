@@ -68,8 +68,6 @@
       <DependentUpon>Registration.cs</DependentUpon>
     </Compile>
     <Compile Include="UserAccount\Authorization\Authentication.cs" />
-    <Compile Include="UserAccount\Authorization\Autorization.cs" />
-    <Compile Include="UserAccount\Authorization\Identification.cs" />
     <EmbeddedResource Include="Authorization.resx">
       <DependentUpon>Authorization.cs</DependentUpon>
     </EmbeddedResource>
@@ -107,9 +105,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Images\5007.jpg" />
-    <Content Include="UserAccount\RegisteredUsers.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
