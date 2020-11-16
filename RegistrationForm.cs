@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
-    public partial class Registration : Form
+    public partial class RegistrationForm : Form
     {
-        public Registration()
+        public RegistrationForm()
         {
             InitializeComponent();
         }

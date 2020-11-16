@@ -13,8 +13,10 @@ namespace AIS_Kinoteatr
         private string Login { get; set; }
         private string Password { get; set; }
         private string Position { get; set; }
+        private string FullName { get; set; }
 
-        private OleDbConnection dbConnection;
+
+        private readonly OleDbConnection dbConnection;
 
         public Authentication(string login, string password)
         {
@@ -31,6 +33,7 @@ namespace AIS_Kinoteatr
                 Login = reader.GetString(1);
                 Password = reader.GetString(2);
                 Position = reader.GetString(3);
+                FullName = reader.GetString(4);
             } 
 
             dbConnection.Close();
@@ -41,7 +44,7 @@ namespace AIS_Kinoteatr
         {
             if (Login != null)
             {
-                Cinema cinema = new Cinema();
+                CinemaForm cinema = new CinemaForm(Login, FullName, Position);
                 cinema.Show();
             }
             else

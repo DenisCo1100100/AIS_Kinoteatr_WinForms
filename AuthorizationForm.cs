@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
-    public partial class Authorization : Form
+    public partial class AuthorizationForm : Form
     {
         public string Login { get; set; }
         public string Password { get; set; }
 
 
-        public Authorization()
+        public AuthorizationForm()
         {
             InitializeComponent();
         }
@@ -27,6 +27,7 @@ namespace AIS_Kinoteatr
         private void button1_Click(object sender, EventArgs e)
         {
             Authentication authentication = new Authentication(Login, Password);
+            //Authentication authentication = new Authentication("Admin", "1111");
             authentication.RunAuthentication();
         }
     }

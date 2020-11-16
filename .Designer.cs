@@ -1,7 +1,7 @@
 ﻿
 namespace AIS_Kinoteatr
 {
-    partial class Authorization
+    partial class AuthorizationForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
