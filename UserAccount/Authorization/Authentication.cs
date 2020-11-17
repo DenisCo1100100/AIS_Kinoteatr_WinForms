@@ -8,33 +8,33 @@ using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
-    class Authentication
+    class Authentication : BaseConection
     {
-        private string Login { get; set; }
-        private string Password { get; set; }
-        private string Position { get; set; }
-        private string FullName { get; set; }
+        private string loadLogin;
+        private string loadPassword;
 
+        private OleDbConnection dbConnection;
 
-        private readonly OleDbConnection dbConnection;
+        public Authentication(string login, string password) 
+            : base(login, password) {}
 
-        public Authentication(string login, string password)
+        public override void Execute()
         {
             dbConnection = new OleDbConnection($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath}\RegisteredUsers.mdb;");
             dbConnection.Open();
 
-            string query = $"SELECT * FROM Users WHERE Login = '{login}' AND Password = '{password}'";
+            string query = $"SELECT * FROM Users WHERE Login = '{Login}' AND Password = '{Password}'";
             OleDbCommand command = new OleDbCommand(query, dbConnection);
 
             OleDbDataReader reader = command.ExecuteReader();
 
-            while (reader.Read()) 
+            while (reader.Read())
             {
-                Login = reader.GetString(1);
-                Password = reader.GetString(2);
+                loadLogin = reader.GetString(1);
+                loadPassword = reader.GetString(2);
                 Position = reader.GetString(3);
                 FullName = reader.GetString(4);
-            } 
+            }
 
             dbConnection.Close();
             reader.Close();
@@ -42,14 +42,14 @@ namespace AIS_Kinoteatr
 
         public void RunAuthentication()
         {
-            if (Login != null)
+            if (Login != null && Login == loadLogin)
             {
                 CinemaForm cinema = new CinemaForm(Login, FullName, Position);
                 cinema.Show();
             }
             else
             {
-                MessageBox.Show($"Аккаунт не зарегистрирован!", "Внимание!");
+                MessageBox.Show("Аккаунт не зарегистрирован!", "Внимание!");
             }
         }
     }

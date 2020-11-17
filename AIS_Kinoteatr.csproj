@@ -68,6 +68,8 @@
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
     <Compile Include="UserAccount\Authorization\Authentication.cs" />
+    <Compile Include="UserAccount\BaseConection.cs" />
+    <Compile Include="UserAccount\Registration\Registration.cs" />
     <EmbeddedResource Include="AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -100,9 +102,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserAccount\Registration\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Images\5007.jpg" />
   </ItemGroup>
