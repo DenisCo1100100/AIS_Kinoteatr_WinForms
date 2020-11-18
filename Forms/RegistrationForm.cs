@@ -16,5 +16,12 @@ namespace AIS_Kinoteatr
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string fullName = lastName.Text + " " + firstName.Text + " " + patronomic.Text;
+            Registration registration = new Registration(login.Text, password.Text, fullName, positions.Text);
+            MessageBox.Show("ГОТОВО!");
+        }
     }
 }

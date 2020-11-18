@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
@@ -15,7 +8,6 @@ namespace AIS_Kinoteatr
         private string Login { get; set; }
         private string FullName { get; set; }
         private string Positions { get; set; }
-
 
         public CinemaForm(string login, string fullName, string position)
         {
@@ -37,6 +29,12 @@ namespace AIS_Kinoteatr
                 $"Имя: {fullNameSplit[1]}\n" +
                 $"Отчество: {fullNameSplit[2]}\n" +
                 $"Должность: {Positions}";
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            RegistrationForm registrationForm = new RegistrationForm();
+            registrationForm.Show();
         }
     }
 }

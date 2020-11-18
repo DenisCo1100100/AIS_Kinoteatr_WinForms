@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.OleDb;
 
 namespace AIS_Kinoteatr
 {
@@ -13,7 +9,12 @@ namespace AIS_Kinoteatr
 
         public override void Execute()
         {
-            throw new NotImplementedException();
+            string cmdText = $"INSERT INTO Users ([Login], [Password], [Function], [FullName]) VALUES ('" + Login + "', '" + Password + "', '"+ Position +"' , '"+ FullName +"')";
+            OleDbCommand cmd = new OleDbCommand(cmdText, OleDbConnect);
+
+            OleDbConnect.Open();
+            cmd.ExecuteNonQuery();
+            OleDbConnect.Close();
         }
     }
 }

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
@@ -13,13 +9,15 @@ namespace AIS_Kinoteatr
         internal string Password { get; set; }
         internal string FullName { get; set; }
         internal string Position { get; set; }
-
+        internal OleDbConnection OleDbConnect { get; set; }
         public BaseConection(string login, string password, string fullName = null, string position = null)
         {
             Login = login;
             Password = password;
             FullName = fullName;
             Position = position;
+            string StrConnection = $@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = { Application.StartupPath }\RegisteredUsers.mdb;";
+            OleDbConnect = new OleDbConnection(StrConnection);
 
             Execute();
         }

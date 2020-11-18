@@ -8,7 +8,6 @@ namespace AIS_Kinoteatr
         public string Login { get; set; }
         public string Password { get; set; }
 
-
         public AuthorizationForm()
         {
             InitializeComponent();
@@ -27,7 +26,6 @@ namespace AIS_Kinoteatr
         private void button1_Click(object sender, EventArgs e)
         {
             Authentication authentication = new Authentication(Login, Password);
-            //Authentication authentication = new Authentication("Admin", "1111");
             authentication.RunAuthentication();
         }
     }

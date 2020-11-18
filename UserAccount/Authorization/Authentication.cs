@@ -7,36 +7,31 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
-{
+{//TODO : Дописать проверку пороля
     class Authentication : BaseConection
     {
         private string loadLogin;
-        private string loadPassword;
-
-        private OleDbConnection dbConnection;
 
         public Authentication(string login, string password) 
             : base(login, password) {}
 
         public override void Execute()
         {
-            dbConnection = new OleDbConnection($@"Provider=Microsoft.Jet.OLEDB.4.0;Data Source={Application.StartupPath}\RegisteredUsers.mdb;");
-            dbConnection.Open();
+            OleDbConnect.Open();
 
             string query = $"SELECT * FROM Users WHERE Login = '{Login}' AND Password = '{Password}'";
-            OleDbCommand command = new OleDbCommand(query, dbConnection);
+            OleDbCommand command = new OleDbCommand(query, OleDbConnect);
 
             OleDbDataReader reader = command.ExecuteReader();
 
             while (reader.Read())
             {
-                loadLogin = reader.GetString(1);
-                loadPassword = reader.GetString(2);
-                Position = reader.GetString(3);
-                FullName = reader.GetString(4);
+                loadLogin = reader.GetString(0);
+                Position = reader.GetString(2);
+                FullName = reader.GetString(3);
             }
 
-            dbConnection.Close();
+            OleDbConnect.Close();
             reader.Close();
         }
 
