@@ -3,9 +3,6 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
@@ -16,7 +13,7 @@ namespace AIS_Kinoteatr
         {
             InitializeComponent();
 
-            pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\0.jpg");
+            pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\0.jpeg");
         }
 
         private void Assortment_Load(object sender, EventArgs e)
@@ -36,13 +33,14 @@ namespace AIS_Kinoteatr
 
             if (imageIndex >= 2) 
             {
-                pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\{imageIndex}.jpg"); 
+                pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\{imageIndex}.jpeg"); 
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new AddingMovieForm().ShowDialog();
+            int indexImage = Convert.ToInt32(AssortmentTable.Rows[AssortmentTable.Rows.Count - 2].Cells[0].Value);
+            new AddingMovieForm(indexImage).ShowDialog();
         }
     }
 }

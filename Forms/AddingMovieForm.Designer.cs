@@ -43,13 +43,15 @@ namespace AIS_Kinoteatr
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(343, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(185, 23);
             this.textBox1.TabIndex = 1;
@@ -57,7 +59,7 @@ namespace AIS_Kinoteatr
             // textBox2
             // 
             this.textBox2.Location = new System.Drawing.Point(343, 47);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(185, 23);
             this.textBox2.TabIndex = 2;
@@ -65,7 +67,7 @@ namespace AIS_Kinoteatr
             // textBox3
             // 
             this.textBox3.Location = new System.Drawing.Point(343, 79);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(185, 23);
             this.textBox3.TabIndex = 3;
@@ -93,9 +95,10 @@ namespace AIS_Kinoteatr
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(16, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(236, 241);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -112,7 +115,7 @@ namespace AIS_Kinoteatr
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(260, 162);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
             this.richTextBox1.Name = "richTextBox1";
             this.richTextBox1.Size = new System.Drawing.Size(268, 130);
             this.richTextBox1.TabIndex = 7;
@@ -141,7 +144,7 @@ namespace AIS_Kinoteatr
             // textBox4
             // 
             this.textBox4.Location = new System.Drawing.Point(343, 111);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(60, 23);
             this.textBox4.TabIndex = 9;
@@ -149,12 +152,13 @@ namespace AIS_Kinoteatr
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(16, 264);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(236, 28);
             this.button1.TabIndex = 11;
             this.button1.Text = "Добавить картинку";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label6
             // 
@@ -175,6 +179,11 @@ namespace AIS_Kinoteatr
             this.button2.TabIndex = 13;
             this.button2.Text = "Готово!";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // AddingMovieForm
             // 
@@ -196,7 +205,7 @@ namespace AIS_Kinoteatr
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddingMovieForm";
             this.Text = "Добавление фильма";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -221,5 +230,7 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }

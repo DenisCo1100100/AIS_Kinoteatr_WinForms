@@ -76,6 +76,7 @@
     <Compile Include="Forms\CinemaForm.Designer.cs">
       <DependentUpon>CinemaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="MoviesTableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\RegistrationForm.cs">
