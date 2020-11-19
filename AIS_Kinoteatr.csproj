@@ -51,6 +51,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CinemaDataBaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Forms\AddingMovieForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddingMovieForm.Designer.cs">
+      <DependentUpon>AddingMovieForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Assortment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,6 +87,9 @@
     <Compile Include="UserAccount\Authorization\Authentication.cs" />
     <Compile Include="UserAccount\BaseConection.cs" />
     <Compile Include="UserAccount\Registration\Registration.cs" />
+    <EmbeddedResource Include="Forms\AddingMovieForm.resx">
+      <DependentUpon>AddingMovieForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Assortment.resx">
       <DependentUpon>Assortment.cs</DependentUpon>
     </EmbeddedResource>

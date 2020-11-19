@@ -91,7 +91,7 @@ namespace AIS_Kinoteatr
             this.label3.TabIndex = 5;
             this.label3.Text = "Авторизация";
             // 
-            // Authorization
+            // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -102,7 +102,9 @@ namespace AIS_Kinoteatr
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.loginTextBox);
-            this.Name = "Authorization";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "AuthorizationForm";
             this.Text = "Кинотеатр";
             this.ResumeLayout(false);
             this.PerformLayout();

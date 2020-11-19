@@ -15,23 +15,34 @@ namespace AIS_Kinoteatr
         public Assortment()
         {
             InitializeComponent();
+
+            pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\0.jpg");
         }
 
         private void Assortment_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataBaseDataSet.Films". При необходимости она может быть перемещена или удалена.
             this.filmsTableAdapter.Fill(this.cinemaDataBaseDataSet.Films);
-
-            //$@"{Application.StartupPath}\FilmsImage\{imageColum.Index}.jpg"
-
         }
 
         private void AssortmentTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0 && (AssortmentTable.Rows.Count - 2) >= e.RowIndex)
+            int imageIndex = 0;
+
+            if (e.RowIndex >= 0)
             {
-                pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\{e.RowIndex}.jpg");
+                imageIndex = Convert.ToInt32(AssortmentTable[0, e.RowIndex].Value);
             }
+
+            if (imageIndex >= 2) 
+            {
+                pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\{imageIndex}.jpg"); 
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new AddingMovieForm().ShowDialog();
         }
     }
 }
