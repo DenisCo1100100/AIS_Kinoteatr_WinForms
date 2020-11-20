@@ -18,7 +18,7 @@ namespace AIS_Kinoteatr
         {
             InitializeComponent();
 
-            ImageName = indexImage;
+            ImageName = indexImage + 1;
 
             openFileDialog1.Filter = "Image Files(*.JPG)|*.JPG";
             openFileDialog1.Filter = "Image Files(*.JPG)|*.JPG";
@@ -40,6 +40,15 @@ namespace AIS_Kinoteatr
         {
             pictureBox1.Image.Save($@"{Application.StartupPath}\FilmsImage\{ImageName}.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
+            MoviesTableMenager moviesTable = new MoviesTableMenager(
+                nameTextBox.Text, 
+                directorTextBox.Text, 
+                CountryTextBox.Text,
+                Convert.ToInt32(priceTextBox.Text),
+                descriptRichBox.Text,
+                ImageName.ToString());
+
+            moviesTable.Add();
         }
     }
 }

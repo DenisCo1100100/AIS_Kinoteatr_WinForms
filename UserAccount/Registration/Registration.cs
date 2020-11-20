@@ -9,7 +9,7 @@ namespace AIS_Kinoteatr
 
         public override void Execute()
         {
-            string cmdText = $"INSERT INTO Users ([Login], [Password], [Function], [FullName]) VALUES ('" + Login + "', '" + Password + "', '"+ Position +"' , '"+ FullName +"')";
+            string cmdText = $"INSERT INTO Users ([Login], [Password], [Function], [FullName]) VALUES ('"+ Login +"', '"+ Password +"', '"+ Position +"', '"+ FullName +"')";
             OleDbCommand cmd = new OleDbCommand(cmdText, OleDbConnect);
 
             OleDbConnect.Open();

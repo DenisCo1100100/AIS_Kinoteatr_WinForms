@@ -29,17 +29,17 @@ namespace AIS_Kinoteatr
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.nameTextBox = new System.Windows.Forms.TextBox();
+            this.directorTextBox = new System.Windows.Forms.TextBox();
+            this.CountryTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.descriptRichBox = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.priceTextBox = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
@@ -48,29 +48,29 @@ namespace AIS_Kinoteatr
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // nameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(343, 15);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(185, 23);
-            this.textBox1.TabIndex = 1;
+            this.nameTextBox.Location = new System.Drawing.Point(343, 15);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Size = new System.Drawing.Size(185, 23);
+            this.nameTextBox.TabIndex = 1;
             // 
-            // textBox2
+            // directorTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(343, 47);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(185, 23);
-            this.textBox2.TabIndex = 2;
+            this.directorTextBox.Location = new System.Drawing.Point(343, 47);
+            this.directorTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.directorTextBox.Name = "directorTextBox";
+            this.directorTextBox.Size = new System.Drawing.Size(185, 23);
+            this.directorTextBox.TabIndex = 2;
             // 
-            // textBox3
+            // CountryTextBox
             // 
-            this.textBox3.Location = new System.Drawing.Point(343, 79);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(185, 23);
-            this.textBox3.TabIndex = 3;
+            this.CountryTextBox.Location = new System.Drawing.Point(343, 79);
+            this.CountryTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.CountryTextBox.Name = "CountryTextBox";
+            this.CountryTextBox.Size = new System.Drawing.Size(185, 23);
+            this.CountryTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -112,14 +112,14 @@ namespace AIS_Kinoteatr
             this.label3.TabIndex = 6;
             this.label3.Text = "Страна";
             // 
-            // richTextBox1
+            // descriptRichBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(260, 162);
-            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(268, 130);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
+            this.descriptRichBox.Location = new System.Drawing.Point(260, 162);
+            this.descriptRichBox.Margin = new System.Windows.Forms.Padding(4);
+            this.descriptRichBox.Name = "descriptRichBox";
+            this.descriptRichBox.Size = new System.Drawing.Size(268, 130);
+            this.descriptRichBox.TabIndex = 7;
+            this.descriptRichBox.Text = "";
             // 
             // label4
             // 
@@ -141,13 +141,13 @@ namespace AIS_Kinoteatr
             this.label5.TabIndex = 10;
             this.label5.Text = "Цена";
             // 
-            // textBox4
+            // priceTextBox
             // 
-            this.textBox4.Location = new System.Drawing.Point(343, 111);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(60, 23);
-            this.textBox4.TabIndex = 9;
+            this.priceTextBox.Location = new System.Drawing.Point(343, 111);
+            this.priceTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Size = new System.Drawing.Size(60, 23);
+            this.priceTextBox.TabIndex = 9;
             // 
             // button1
             // 
@@ -194,15 +194,15 @@ namespace AIS_Kinoteatr
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.descriptRichBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CountryTextBox);
+            this.Controls.Add(this.directorTextBox);
+            this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -217,16 +217,16 @@ namespace AIS_Kinoteatr
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox nameTextBox;
+        private System.Windows.Forms.TextBox directorTextBox;
+        private System.Windows.Forms.TextBox CountryTextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox descriptRichBox;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox priceTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
