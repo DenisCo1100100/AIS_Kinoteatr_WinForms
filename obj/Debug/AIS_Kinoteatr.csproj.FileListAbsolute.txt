@@ -23,3 +23,4 @@ D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.RegistrationForm.resou
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\CinemaDataBase.mdb
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.Assortment.resources
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AddingMovieForm.resources
+D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.EmployeesForm.resources

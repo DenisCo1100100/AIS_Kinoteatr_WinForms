@@ -40,5 +40,10 @@ namespace AIS_Kinoteatr
         {
             new Assortment().Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            new EmployeesForm().ShowDialog();
+        }
     }
 }

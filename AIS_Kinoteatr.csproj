@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CinemaDataBaseDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CinemaDataBaseDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaDataBaseDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddingMovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +81,12 @@
     <Compile Include="Forms\CinemaForm.Designer.cs">
       <DependentUpon>CinemaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EmployeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeesForm.Designer.cs">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MoviesTableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -100,6 +111,9 @@
     <EmbeddedResource Include="Forms\CinemaForm.resx">
       <DependentUpon>CinemaForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EmployeesForm.resx">
+      <DependentUpon>EmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -123,6 +137,17 @@
     </None>
     <None Include="CinemaDataBaseDataSet.xss">
       <DependentUpon>CinemaDataBaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet1.xsc">
+      <DependentUpon>CinemaDataBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaDataBaseDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaDataBaseDataSet1.xss">
+      <DependentUpon>CinemaDataBaseDataSet1.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.OleDb;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Data.OleDb;
 
 namespace AIS_Kinoteatr
 {
     class MoviesTableMenager
     {
-        //TODO: написать класс для редактирования таблицы фильмов
-
         private string ImageIndex { get; set; }
         private string Name { get; set; }
         private string Director { get; set; }
