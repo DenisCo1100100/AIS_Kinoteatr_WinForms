@@ -26,7 +26,7 @@ namespace AIS_Kinoteatr
         {
             string StrConnection = $@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = D:\Serious Projects\AIS_Kinoteatr\CinemaDataBase.mdb;";
             OleDbConnect = new OleDbConnection(StrConnection);
-            string cmdText = $"INSERT INTO Films ([ImageIndex], [Name], [Description], [Price], [Director], [Country]) VALUES ('"+ ImageIndex +"', '"+ Name +"', '"+ Description +"', '"+ Price +"', '"+ Director +"', '"+ Country +"')";
+            string cmdText = $"INSERT INTO Films ([Код], [Название], [Описание], [Цена], [Режиссёр], [Страна]) VALUES ('"+ ImageIndex +"', '"+ Name +"', '"+ Description +"', '"+ Price +"', '"+ Director +"', '"+ Country +"')";
 
             OleDbCommand cmd = new OleDbCommand(cmdText, OleDbConnect);
 

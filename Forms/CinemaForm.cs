@@ -38,7 +38,7 @@ namespace AIS_Kinoteatr
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Assortment().Show();
+            new AssortmentForm().Show();
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -62,11 +62,11 @@
     <Compile Include="Forms\AddingMovieForm.Designer.cs">
       <DependentUpon>AddingMovieForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Assortment.cs">
+    <Compile Include="Forms\AssortmentForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\Assortment.Designer.cs">
-      <DependentUpon>Assortment.cs</DependentUpon>
+    <Compile Include="Forms\AssortmentForm.Designer.cs">
+      <DependentUpon>AssortmentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\AuthorizationForm.cs">
       <SubType>Form</SubType>
@@ -96,14 +96,19 @@
     <Compile Include="Forms\RegistrationForm.Designer.cs">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="RegisteredUsersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RegisteredUsersDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="UserAccount\Authorization\Authentication.cs" />
     <Compile Include="UserAccount\BaseConection.cs" />
     <Compile Include="UserAccount\Registration\Registration.cs" />
     <EmbeddedResource Include="Forms\AddingMovieForm.resx">
       <DependentUpon>AddingMovieForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Assortment.resx">
-      <DependentUpon>Assortment.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\AssortmentForm.resx">
+      <DependentUpon>AssortmentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
@@ -158,6 +163,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="RegisteredUsersDataSet.xsc">
+      <DependentUpon>RegisteredUsersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RegisteredUsersDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RegisteredUsersDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RegisteredUsersDataSet.xss">
+      <DependentUpon>RegisteredUsersDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -167,6 +183,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CinemaDataBase.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="RegisteredUsers.mdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

@@ -7,9 +7,11 @@ using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
-    public partial class Assortment : Form
+    public partial class AssortmentForm : Form
     {
-        public Assortment()
+        public DataSet dataSet;
+
+        public AssortmentForm()
         {
             InitializeComponent();
 
@@ -20,6 +22,7 @@ namespace AIS_Kinoteatr
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataBaseDataSet.Films". При необходимости она может быть перемещена или удалена.
             this.filmsTableAdapter.Fill(this.cinemaDataBaseDataSet.Films);
+            dataSet = this.cinemaDataBaseDataSet;
         }
 
         private void AssortmentTable_CellClick(object sender, DataGridViewCellEventArgs e)

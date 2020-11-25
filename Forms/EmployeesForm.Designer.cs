@@ -31,180 +31,47 @@ namespace AIS_Kinoteatr
         {
             this.components = new System.ComponentModel.Container();
             this.employees = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаПриемаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.телефонDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.паспортDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фотографияDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.замечанияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.кодДолжностиDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.табельныйНомерDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.иННDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.пенсионноеСвидетельствоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.полDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаРожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.местоРожденияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.образованиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hESHDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cinemaDataBaseDataSet1 = new AIS_Kinoteatr.CinemaDataBaseDataSet1();
             this.cinemaDataBaseDataSet = new AIS_Kinoteatr.CinemaDataBaseDataSet();
             this.cinemaDataBaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.employeesTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet1TableAdapters.EmployeesTableAdapter();
+            this.registeredUsersDataSet = new AIS_Kinoteatr.RegisteredUsersDataSet();
+            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.usersTableAdapter = new AIS_Kinoteatr.RegisteredUsersDataSetTableAdapters.UsersTableAdapter();
+            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.functionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pasportNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registeredUsersDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // employees
             // 
             this.employees.AutoGenerateColumns = false;
+            this.employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
+            this.employees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодDataGridViewTextBoxColumn,
-            this.фамилияDataGridViewTextBoxColumn,
-            this.имяDataGridViewTextBoxColumn,
-            this.отчествоDataGridViewTextBoxColumn,
-            this.датаПриемаDataGridViewTextBoxColumn,
-            this.адресDataGridViewTextBoxColumn,
-            this.телефонDataGridViewTextBoxColumn,
-            this.паспортDataGridViewTextBoxColumn,
-            this.фотографияDataGridViewImageColumn,
-            this.замечанияDataGridViewTextBoxColumn,
-            this.кодДолжностиDataGridViewTextBoxColumn,
-            this.табельныйНомерDataGridViewTextBoxColumn,
-            this.иННDataGridViewTextBoxColumn,
-            this.пенсионноеСвидетельствоDataGridViewTextBoxColumn,
-            this.полDataGridViewTextBoxColumn,
-            this.датаРожденияDataGridViewTextBoxColumn,
-            this.местоРожденияDataGridViewTextBoxColumn,
-            this.образованиеDataGridViewTextBoxColumn,
-            this.hESHDataGridViewTextBoxColumn});
-            this.employees.DataSource = this.employeesBindingSource;
-            this.employees.Location = new System.Drawing.Point(126, 12);
+            this.loginDataGridViewTextBoxColumn,
+            this.functionDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn,
+            this.pasportNumberDataGridViewTextBoxColumn,
+            this.ageDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn});
+            this.employees.DataSource = this.usersBindingSource;
+            this.employees.Location = new System.Drawing.Point(12, 12);
             this.employees.Name = "employees";
-            this.employees.Size = new System.Drawing.Size(662, 164);
+            this.employees.Size = new System.Drawing.Size(776, 317);
             this.employees.TabIndex = 0;
-            // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            // 
-            // фамилияDataGridViewTextBoxColumn
-            // 
-            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
-            // 
-            // имяDataGridViewTextBoxColumn
-            // 
-            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
-            // 
-            // отчествоDataGridViewTextBoxColumn
-            // 
-            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
-            // 
-            // датаПриемаDataGridViewTextBoxColumn
-            // 
-            this.датаПриемаDataGridViewTextBoxColumn.DataPropertyName = "Дата приема";
-            this.датаПриемаDataGridViewTextBoxColumn.HeaderText = "Дата приема";
-            this.датаПриемаDataGridViewTextBoxColumn.Name = "датаПриемаDataGridViewTextBoxColumn";
-            // 
-            // адресDataGridViewTextBoxColumn
-            // 
-            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
-            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
-            // 
-            // телефонDataGridViewTextBoxColumn
-            // 
-            this.телефонDataGridViewTextBoxColumn.DataPropertyName = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.HeaderText = "Телефон";
-            this.телефонDataGridViewTextBoxColumn.Name = "телефонDataGridViewTextBoxColumn";
-            // 
-            // паспортDataGridViewTextBoxColumn
-            // 
-            this.паспортDataGridViewTextBoxColumn.DataPropertyName = "Паспорт";
-            this.паспортDataGridViewTextBoxColumn.HeaderText = "Паспорт";
-            this.паспортDataGridViewTextBoxColumn.Name = "паспортDataGridViewTextBoxColumn";
-            // 
-            // фотографияDataGridViewImageColumn
-            // 
-            this.фотографияDataGridViewImageColumn.DataPropertyName = "Фотография";
-            this.фотографияDataGridViewImageColumn.HeaderText = "Фотография";
-            this.фотографияDataGridViewImageColumn.Name = "фотографияDataGridViewImageColumn";
-            // 
-            // замечанияDataGridViewTextBoxColumn
-            // 
-            this.замечанияDataGridViewTextBoxColumn.DataPropertyName = "Замечания";
-            this.замечанияDataGridViewTextBoxColumn.HeaderText = "Замечания";
-            this.замечанияDataGridViewTextBoxColumn.Name = "замечанияDataGridViewTextBoxColumn";
-            // 
-            // кодДолжностиDataGridViewTextBoxColumn
-            // 
-            this.кодДолжностиDataGridViewTextBoxColumn.DataPropertyName = "Код должности";
-            this.кодДолжностиDataGridViewTextBoxColumn.HeaderText = "Код должности";
-            this.кодДолжностиDataGridViewTextBoxColumn.Name = "кодДолжностиDataGridViewTextBoxColumn";
-            // 
-            // табельныйНомерDataGridViewTextBoxColumn
-            // 
-            this.табельныйНомерDataGridViewTextBoxColumn.DataPropertyName = "Табельный номер";
-            this.табельныйНомерDataGridViewTextBoxColumn.HeaderText = "Табельный номер";
-            this.табельныйНомерDataGridViewTextBoxColumn.Name = "табельныйНомерDataGridViewTextBoxColumn";
-            // 
-            // иННDataGridViewTextBoxColumn
-            // 
-            this.иННDataGridViewTextBoxColumn.DataPropertyName = "ИНН";
-            this.иННDataGridViewTextBoxColumn.HeaderText = "ИНН";
-            this.иННDataGridViewTextBoxColumn.Name = "иННDataGridViewTextBoxColumn";
-            // 
-            // пенсионноеСвидетельствоDataGridViewTextBoxColumn
-            // 
-            this.пенсионноеСвидетельствоDataGridViewTextBoxColumn.DataPropertyName = "Пенсионное свидетельство";
-            this.пенсионноеСвидетельствоDataGridViewTextBoxColumn.HeaderText = "Пенсионное свидетельство";
-            this.пенсионноеСвидетельствоDataGridViewTextBoxColumn.Name = "пенсионноеСвидетельствоDataGridViewTextBoxColumn";
-            // 
-            // полDataGridViewTextBoxColumn
-            // 
-            this.полDataGridViewTextBoxColumn.DataPropertyName = "Пол";
-            this.полDataGridViewTextBoxColumn.HeaderText = "Пол";
-            this.полDataGridViewTextBoxColumn.Name = "полDataGridViewTextBoxColumn";
-            // 
-            // датаРожденияDataGridViewTextBoxColumn
-            // 
-            this.датаРожденияDataGridViewTextBoxColumn.DataPropertyName = "Дата рождения";
-            this.датаРожденияDataGridViewTextBoxColumn.HeaderText = "Дата рождения";
-            this.датаРожденияDataGridViewTextBoxColumn.Name = "датаРожденияDataGridViewTextBoxColumn";
-            // 
-            // местоРожденияDataGridViewTextBoxColumn
-            // 
-            this.местоРожденияDataGridViewTextBoxColumn.DataPropertyName = "Место рождения";
-            this.местоРожденияDataGridViewTextBoxColumn.HeaderText = "Место рождения";
-            this.местоРожденияDataGridViewTextBoxColumn.Name = "местоРожденияDataGridViewTextBoxColumn";
-            // 
-            // образованиеDataGridViewTextBoxColumn
-            // 
-            this.образованиеDataGridViewTextBoxColumn.DataPropertyName = "Образование";
-            this.образованиеDataGridViewTextBoxColumn.HeaderText = "Образование";
-            this.образованиеDataGridViewTextBoxColumn.Name = "образованиеDataGridViewTextBoxColumn";
-            // 
-            // hESHDataGridViewTextBoxColumn
-            // 
-            this.hESHDataGridViewTextBoxColumn.DataPropertyName = "HESH";
-            this.hESHDataGridViewTextBoxColumn.HeaderText = "HESH";
-            this.hESHDataGridViewTextBoxColumn.Name = "hESHDataGridViewTextBoxColumn";
             // 
             // employeesBindingSource
             // 
@@ -230,6 +97,62 @@ namespace AIS_Kinoteatr
             // 
             this.employeesTableAdapter.ClearBeforeFill = true;
             // 
+            // registeredUsersDataSet
+            // 
+            this.registeredUsersDataSet.DataSetName = "RegisteredUsersDataSet";
+            this.registeredUsersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // usersBindingSource
+            // 
+            this.usersBindingSource.DataMember = "Users";
+            this.usersBindingSource.DataSource = this.registeredUsersDataSet;
+            // 
+            // usersTableAdapter
+            // 
+            this.usersTableAdapter.ClearBeforeFill = true;
+            // 
+            // loginDataGridViewTextBoxColumn
+            // 
+            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
+            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
+            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
+            this.loginDataGridViewTextBoxColumn.Width = 58;
+            // 
+            // functionDataGridViewTextBoxColumn
+            // 
+            this.functionDataGridViewTextBoxColumn.DataPropertyName = "Function";
+            this.functionDataGridViewTextBoxColumn.HeaderText = "Function";
+            this.functionDataGridViewTextBoxColumn.Name = "functionDataGridViewTextBoxColumn";
+            this.functionDataGridViewTextBoxColumn.Width = 73;
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.Width = 76;
+            // 
+            // pasportNumberDataGridViewTextBoxColumn
+            // 
+            this.pasportNumberDataGridViewTextBoxColumn.DataPropertyName = "PasportNumber";
+            this.pasportNumberDataGridViewTextBoxColumn.HeaderText = "PasportNumber";
+            this.pasportNumberDataGridViewTextBoxColumn.Name = "pasportNumberDataGridViewTextBoxColumn";
+            this.pasportNumberDataGridViewTextBoxColumn.Width = 105;
+            // 
+            // ageDataGridViewTextBoxColumn
+            // 
+            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
+            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
+            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
+            this.ageDataGridViewTextBoxColumn.Width = 51;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.Width = 70;
+            // 
             // EmployeesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -244,6 +167,8 @@ namespace AIS_Kinoteatr
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.registeredUsersDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -256,24 +181,14 @@ namespace AIS_Kinoteatr
         private CinemaDataBaseDataSet1 cinemaDataBaseDataSet1;
         private System.Windows.Forms.BindingSource employeesBindingSource;
         private CinemaDataBaseDataSet1TableAdapters.EmployeesTableAdapter employeesTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn отчествоDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаПриемаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn телефонDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn паспортDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn фотографияDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn замечанияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn кодДолжностиDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn табельныйНомерDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn иННDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn пенсионноеСвидетельствоDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn полDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn датаРожденияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn местоРожденияDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn образованиеDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hESHDataGridViewTextBoxColumn;
+        private RegisteredUsersDataSet registeredUsersDataSet;
+        private System.Windows.Forms.BindingSource usersBindingSource;
+        private RegisteredUsersDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn functionDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn pasportNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace AIS_Kinoteatr
 {
-    partial class Assortment
+    partial class AssortmentForm
     {
         /// <summary>
         /// Required designer variable.
@@ -43,6 +43,7 @@ namespace AIS_Kinoteatr
             this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters.FilmsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.AssortmentTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).BeginInit();
@@ -156,12 +157,22 @@ namespace AIS_Kinoteatr
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 309);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(214, 29);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Обновить";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
             // Assortment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1046, 433);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.AssortmentTable);
@@ -180,9 +191,7 @@ namespace AIS_Kinoteatr
         #endregion
 
         private System.Windows.Forms.DataGridView AssortmentTable;
-        private CinemaDataBaseDataSet cinemaDataBaseDataSet;
         private System.Windows.Forms.BindingSource filmsBindingSource;
-        private CinemaDataBaseDataSetTableAdapters.FilmsTableAdapter filmsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn названиеDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn описаниеDataGridViewTextBoxColumn;
@@ -191,5 +200,8 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn странаDataGridViewTextBoxColumn;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        public CinemaDataBaseDataSetTableAdapters.FilmsTableAdapter filmsTableAdapter;
+        public CinemaDataBaseDataSet cinemaDataBaseDataSet;
     }
 }

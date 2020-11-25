@@ -19,8 +19,8 @@ namespace AIS_Kinoteatr
 
         private void EmployeesForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataBaseDataSet1.Employees". При необходимости она может быть перемещена или удалена.
-            this.employeesTableAdapter.Fill(this.cinemaDataBaseDataSet1.Employees);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "registeredUsersDataSet.Users". При необходимости она может быть перемещена или удалена.
+            this.usersTableAdapter.Fill(this.registeredUsersDataSet.Users);
         }
     }
 }
