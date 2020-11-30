@@ -34,9 +34,10 @@ namespace AIS_Kinoteatr
             this.userNameLable = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button3 = new System.Windows.Forms.Button();
+            this.clientsButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -86,6 +87,16 @@ namespace AIS_Kinoteatr
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 41);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(120, 23);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Сотрудники";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
@@ -107,15 +118,15 @@ namespace AIS_Kinoteatr
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // button3
+            // clientsButton
             // 
-            this.button3.Location = new System.Drawing.Point(12, 41);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(120, 23);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Сотрудники";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.clientsButton.Location = new System.Drawing.Point(12, 70);
+            this.clientsButton.Name = "clientsButton";
+            this.clientsButton.Size = new System.Drawing.Size(120, 23);
+            this.clientsButton.TabIndex = 5;
+            this.clientsButton.Text = "Клиенты";
+            this.clientsButton.UseVisualStyleBackColor = true;
+            this.clientsButton.Click += new System.EventHandler(this.clientsButton_Click);
             // 
             // CinemaForm
             // 
@@ -123,6 +134,7 @@ namespace AIS_Kinoteatr
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(1019, 622);
+            this.Controls.Add(this.clientsButton);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -151,5 +163,6 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button clientsButton;
     }
 }

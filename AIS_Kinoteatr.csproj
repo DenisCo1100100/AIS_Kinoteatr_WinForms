@@ -56,6 +56,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CinemaDataBaseDataSet1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="CinemaDataBaseDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaDataBaseDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CinemaDataBaseDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CinemaDataBaseDataSet3.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddingMovieForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +90,12 @@
     </Compile>
     <Compile Include="Forms\CinemaForm.Designer.cs">
       <DependentUpon>CinemaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ClientsForm.Designer.cs">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\EmployeesForm.cs">
       <SubType>Form</SubType>
@@ -115,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CinemaForm.resx">
       <DependentUpon>CinemaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ClientsForm.resx">
+      <DependentUpon>ClientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\EmployeesForm.resx">
       <DependentUpon>EmployeesForm.cs</DependentUpon>
@@ -153,6 +172,28 @@
     </None>
     <None Include="CinemaDataBaseDataSet1.xss">
       <DependentUpon>CinemaDataBaseDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet2.xsc">
+      <DependentUpon>CinemaDataBaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaDataBaseDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaDataBaseDataSet2.xss">
+      <DependentUpon>CinemaDataBaseDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet3.xsc">
+      <DependentUpon>CinemaDataBaseDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="CinemaDataBaseDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CinemaDataBaseDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CinemaDataBaseDataSet3.xss">
+      <DependentUpon>CinemaDataBaseDataSet3.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -33,17 +33,22 @@ namespace AIS_Kinoteatr
 
         private void button1_Click(object sender, EventArgs e)
         {
-            new RegistrationForm().Show();
+            new RegistrationForm().ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new AssortmentForm().Show();
+            new AssortmentForm().ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
             new EmployeesForm().ShowDialog();
+        }
+
+        private void clientsButton_Click(object sender, EventArgs e)
+        {
+            new ClientsForm().ShowDialog();
         }
     }
 }

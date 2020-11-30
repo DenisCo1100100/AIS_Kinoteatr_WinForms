@@ -21,7 +21,8 @@ D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AuthorizationForm.reso
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.CinemaForm.resources
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.RegistrationForm.resources
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\CinemaDataBase.mdb
-D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.Assortment.resources
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AddingMovieForm.resources
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.EmployeesForm.resources
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\RegisteredUsers.mdb
+D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AssortmentForm.resources
+D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.ClientsForm.resources

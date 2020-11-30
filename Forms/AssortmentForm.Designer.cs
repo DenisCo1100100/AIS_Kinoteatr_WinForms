@@ -31,7 +31,7 @@ namespace AIS_Kinoteatr
         {
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.AssortmentTable = new System.Windows.Forms.DataGridView();
+            this.assortmentTable = new System.Windows.Forms.DataGridView();
             this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.описаниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,27 +44,27 @@ namespace AIS_Kinoteatr
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.AssortmentTable)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // AssortmentTable
+            // assortmentTable
             // 
-            this.AssortmentTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.assortmentTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.AssortmentTable.AutoGenerateColumns = false;
-            this.AssortmentTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.AssortmentTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.AssortmentTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.assortmentTable.AutoGenerateColumns = false;
+            this.assortmentTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.assortmentTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.assortmentTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.кодDataGridViewTextBoxColumn,
             this.названиеDataGridViewTextBoxColumn,
             this.описаниеDataGridViewTextBoxColumn,
             this.ценаDataGridViewTextBoxColumn,
             this.режиссёрDataGridViewTextBoxColumn,
             this.странаDataGridViewTextBoxColumn});
-            this.AssortmentTable.DataSource = this.filmsBindingSource;
+            this.assortmentTable.DataSource = this.filmsBindingSource;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -72,15 +72,15 @@ namespace AIS_Kinoteatr
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.AssortmentTable.DefaultCellStyle = dataGridViewCellStyle1;
-            this.AssortmentTable.Location = new System.Drawing.Point(232, 12);
-            this.AssortmentTable.Name = "AssortmentTable";
-            this.AssortmentTable.RowHeadersVisible = false;
-            this.AssortmentTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.AssortmentTable.Size = new System.Drawing.Size(802, 409);
-            this.AssortmentTable.StandardTab = true;
-            this.AssortmentTable.TabIndex = 0;
-            this.AssortmentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssortmentTable_CellClick);
+            this.assortmentTable.DefaultCellStyle = dataGridViewCellStyle1;
+            this.assortmentTable.Location = new System.Drawing.Point(232, 12);
+            this.assortmentTable.Name = "assortmentTable";
+            this.assortmentTable.RowHeadersVisible = false;
+            this.assortmentTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.assortmentTable.Size = new System.Drawing.Size(802, 409);
+            this.assortmentTable.StandardTab = true;
+            this.assortmentTable.TabIndex = 0;
+            this.assortmentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssortmentTable_CellClick);
             // 
             // кодDataGridViewTextBoxColumn
             // 
@@ -165,8 +165,9 @@ namespace AIS_Kinoteatr
             this.button2.TabIndex = 3;
             this.button2.Text = "Обновить";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // Assortment
+            // AssortmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -175,12 +176,12 @@ namespace AIS_Kinoteatr
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.AssortmentTable);
+            this.Controls.Add(this.assortmentTable);
             this.MaximizeBox = false;
-            this.Name = "Assortment";
+            this.Name = "AssortmentForm";
             this.Text = "Ассортимент";
             this.Load += new System.EventHandler(this.Assortment_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.AssortmentTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -190,7 +191,7 @@ namespace AIS_Kinoteatr
 
         #endregion
 
-        private System.Windows.Forms.DataGridView AssortmentTable;
+        private System.Windows.Forms.DataGridView assortmentTable;
         private System.Windows.Forms.BindingSource filmsBindingSource;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn названиеDataGridViewTextBoxColumn;
