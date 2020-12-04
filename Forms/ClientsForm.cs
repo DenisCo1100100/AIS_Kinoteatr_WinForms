@@ -19,9 +19,8 @@ namespace AIS_Kinoteatr
 
         private void ClientsForm_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataBaseDataSet3.Clients". При необходимости она может быть перемещена или удалена.
-            this.clientsTableAdapter.Fill(this.cinemaDataBaseDataSet3.Clients);
-
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "cinemaDataBaseDataSet1.Clients". При необходимости она может быть перемещена или удалена.
+            this.clientsTableAdapter.Fill(this.cinemaDataBaseDataSet1.Clients);
         }
     }
 }

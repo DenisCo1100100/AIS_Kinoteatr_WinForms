@@ -21,6 +21,8 @@ namespace AIS_Kinoteatr
         {
             string fullName = lastName.Text + " " + firstName.Text + " " + patronomic.Text;
             Registration registration = new Registration(login.Text, password.Text, fullName, positions.Text);
+            registration.Execute(int.Parse(pasportNumber.Text), int.Parse(age.Text), adres.Text, int.Parse(accsesLevel.Text));
+
             MessageBox.Show("ГОТОВО!");
         }
     }

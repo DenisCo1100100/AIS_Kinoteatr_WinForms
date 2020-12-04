@@ -1,4 +1,5 @@
 ﻿using System.Data.OleDb;
+using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
 {
@@ -24,8 +25,9 @@ namespace AIS_Kinoteatr
 
         public void Add()
         {
-            string StrConnection = $@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = D:\Serious Projects\AIS_Kinoteatr\CinemaDataBase.mdb;";
-            OleDbConnect = new OleDbConnection(StrConnection);
+            string strConnection = $@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = CinemaDataBase.mdb;";
+            OleDbConnect = new OleDbConnection(strConnection);
+
             string cmdText = $"INSERT INTO Films ([Код], [Название], [Описание], [Цена], [Режиссёр], [Страна]) VALUES ('"+ ImageIndex +"', '"+ Name +"', '"+ Description +"', '"+ Price +"', '"+ Director +"', '"+ Country +"')";
 
             OleDbCommand cmd = new OleDbCommand(cmdText, OleDbConnect);

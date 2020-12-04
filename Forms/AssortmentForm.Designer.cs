@@ -30,24 +30,24 @@ namespace AIS_Kinoteatr
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.assortmentTable = new System.Windows.Forms.DataGridView();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.названиеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.описаниеDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ценаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.режиссёрDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.странаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cinemaDataBaseDataSet = new AIS_Kinoteatr.CinemaDataBaseDataSet();
-            this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters.FilmsTableAdapter();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
+            this.cinemaDataBaseDataSet2 = new AIS_Kinoteatr.CinemaDataBaseDataSet2();
+            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet2TableAdapters.FilmsTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // assortmentTable
@@ -58,21 +58,21 @@ namespace AIS_Kinoteatr
             this.assortmentTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
             this.assortmentTable.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.assortmentTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодDataGridViewTextBoxColumn,
-            this.названиеDataGridViewTextBoxColumn,
-            this.описаниеDataGridViewTextBoxColumn,
-            this.ценаDataGridViewTextBoxColumn,
-            this.режиссёрDataGridViewTextBoxColumn,
-            this.странаDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
             this.assortmentTable.DataSource = this.filmsBindingSource;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.assortmentTable.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assortmentTable.DefaultCellStyle = dataGridViewCellStyle2;
             this.assortmentTable.Location = new System.Drawing.Point(232, 12);
             this.assortmentTable.Name = "assortmentTable";
             this.assortmentTable.RowHeadersVisible = false;
@@ -81,62 +81,6 @@ namespace AIS_Kinoteatr
             this.assortmentTable.StandardTab = true;
             this.assortmentTable.TabIndex = 0;
             this.assortmentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssortmentTable_CellClick);
-            // 
-            // кодDataGridViewTextBoxColumn
-            // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
-            this.кодDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // названиеDataGridViewTextBoxColumn
-            // 
-            this.названиеDataGridViewTextBoxColumn.DataPropertyName = "Название";
-            this.названиеDataGridViewTextBoxColumn.HeaderText = "Название";
-            this.названиеDataGridViewTextBoxColumn.Name = "названиеDataGridViewTextBoxColumn";
-            this.названиеDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // описаниеDataGridViewTextBoxColumn
-            // 
-            this.описаниеDataGridViewTextBoxColumn.DataPropertyName = "Описание";
-            this.описаниеDataGridViewTextBoxColumn.HeaderText = "Описание";
-            this.описаниеDataGridViewTextBoxColumn.Name = "описаниеDataGridViewTextBoxColumn";
-            this.описаниеDataGridViewTextBoxColumn.Width = 82;
-            // 
-            // ценаDataGridViewTextBoxColumn
-            // 
-            this.ценаDataGridViewTextBoxColumn.DataPropertyName = "Цена";
-            this.ценаDataGridViewTextBoxColumn.HeaderText = "Цена";
-            this.ценаDataGridViewTextBoxColumn.Name = "ценаDataGridViewTextBoxColumn";
-            this.ценаDataGridViewTextBoxColumn.Width = 58;
-            // 
-            // режиссёрDataGridViewTextBoxColumn
-            // 
-            this.режиссёрDataGridViewTextBoxColumn.DataPropertyName = "Режиссёр";
-            this.режиссёрDataGridViewTextBoxColumn.HeaderText = "Режиссёр";
-            this.режиссёрDataGridViewTextBoxColumn.Name = "режиссёрDataGridViewTextBoxColumn";
-            this.режиссёрDataGridViewTextBoxColumn.Width = 83;
-            // 
-            // странаDataGridViewTextBoxColumn
-            // 
-            this.странаDataGridViewTextBoxColumn.DataPropertyName = "Страна";
-            this.странаDataGridViewTextBoxColumn.HeaderText = "Страна";
-            this.странаDataGridViewTextBoxColumn.Name = "странаDataGridViewTextBoxColumn";
-            this.странаDataGridViewTextBoxColumn.Width = 68;
-            // 
-            // filmsBindingSource
-            // 
-            this.filmsBindingSource.DataMember = "Films";
-            this.filmsBindingSource.DataSource = this.cinemaDataBaseDataSet;
-            // 
-            // cinemaDataBaseDataSet
-            // 
-            this.cinemaDataBaseDataSet.DataSetName = "CinemaDataBaseDataSet";
-            this.cinemaDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // filmsTableAdapter
-            // 
-            this.filmsTableAdapter.ClearBeforeFill = true;
             // 
             // button1
             // 
@@ -165,7 +109,63 @@ namespace AIS_Kinoteatr
             this.button2.TabIndex = 3;
             this.button2.Text = "Обновить";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.update_Click);
+            // 
+            // cinemaDataBaseDataSet2
+            // 
+            this.cinemaDataBaseDataSet2.DataSetName = "CinemaDataBaseDataSet2";
+            this.cinemaDataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // filmsBindingSource
+            // 
+            this.filmsBindingSource.DataMember = "Films";
+            this.filmsBindingSource.DataSource = this.cinemaDataBaseDataSet2;
+            // 
+            // filmsTableAdapter
+            // 
+            this.filmsTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Код";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Код";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 51;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Название";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Название";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Описание";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Описание";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 82;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Цена";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Цена";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 58;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Режиссёр";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Режиссёр";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 83;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Страна";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Страна";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.Width = 68;
             // 
             // AssortmentForm
             // 
@@ -182,9 +182,9 @@ namespace AIS_Kinoteatr
             this.Text = "Ассортимент";
             this.Load += new System.EventHandler(this.Assortment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -192,17 +192,23 @@ namespace AIS_Kinoteatr
         #endregion
 
         private System.Windows.Forms.DataGridView assortmentTable;
-        private System.Windows.Forms.BindingSource filmsBindingSource;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn названиеDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn описаниеDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ценаDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn режиссёрDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn странаDataGridViewTextBoxColumn;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        public CinemaDataBaseDataSetTableAdapters.FilmsTableAdapter filmsTableAdapter;
-        public CinemaDataBaseDataSet cinemaDataBaseDataSet;
+        private CinemaDataBaseDataSet2 cinemaDataBaseDataSet2;
+        private System.Windows.Forms.BindingSource filmsBindingSource;
+        private CinemaDataBaseDataSet2TableAdapters.FilmsTableAdapter filmsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

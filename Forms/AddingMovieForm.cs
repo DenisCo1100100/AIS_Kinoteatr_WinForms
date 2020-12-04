@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.OleDb;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -13,12 +14,14 @@ namespace AIS_Kinoteatr
     public partial class AddingMovieForm : Form
     {
         private int ImageName { get; set; }
+        private DataGridView AssortmentDataGrid { get; set; }
 
-        public AddingMovieForm(int indexImage)
+        public AddingMovieForm(int indexImage, DataGridView assortmentDataGrid)
         {
             InitializeComponent();
 
             ImageName = indexImage + 1;
+            AssortmentDataGrid = assortmentDataGrid;
 
             openFileDialog1.Filter = "Image Files(*.JPG)|*.JPG";
             openFileDialog1.Filter = "Image Files(*.JPG)|*.JPG";
@@ -49,6 +52,12 @@ namespace AIS_Kinoteatr
                 ImageName.ToString());
 
             moviesTable.Add();
+        }
+
+        private void AddingMovieForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DataSet dataSet = new DataSet(); 
+            OleDbConnection com = new OleDbConnection($@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = CinemaDataBase.mdb;");
         }
     }
 }

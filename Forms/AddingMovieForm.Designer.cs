@@ -208,6 +208,7 @@ namespace AIS_Kinoteatr
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AddingMovieForm";
             this.Text = "Добавление фильма";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddingMovieForm_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

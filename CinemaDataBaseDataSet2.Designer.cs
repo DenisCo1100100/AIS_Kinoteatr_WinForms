@@ -20,17 +20,17 @@ namespace AIS_Kinoteatr {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("CinemaDataBaseDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("CinemaDataBaseDataSet2")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class CinemaDataBaseDataSet : global::System.Data.DataSet {
+    public partial class CinemaDataBaseDataSet2 : global::System.Data.DataSet {
         
-        private EmployeesDataTable tableEmployees;
+        private FilmsDataTable tableFilms;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public CinemaDataBaseDataSet() {
+        public CinemaDataBaseDataSet2() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace AIS_Kinoteatr {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        protected CinemaDataBaseDataSet(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected CinemaDataBaseDataSet2(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace AIS_Kinoteatr {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Employees"] != null)) {
-                    base.Tables.Add(new EmployeesDataTable(ds.Tables["Employees"]));
+                if ((ds.Tables["Films"] != null)) {
+                    base.Tables.Add(new FilmsDataTable(ds.Tables["Films"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace AIS_Kinoteatr {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public EmployeesDataTable Employees {
+        public FilmsDataTable Films {
             get {
-                return this.tableEmployees;
+                return this.tableFilms;
             }
         }
         
@@ -127,7 +127,7 @@ namespace AIS_Kinoteatr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            CinemaDataBaseDataSet cln = ((CinemaDataBaseDataSet)(base.Clone()));
+            CinemaDataBaseDataSet2 cln = ((CinemaDataBaseDataSet2)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace AIS_Kinoteatr {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Employees"] != null)) {
-                    base.Tables.Add(new EmployeesDataTable(ds.Tables["Employees"]));
+                if ((ds.Tables["Films"] != null)) {
+                    base.Tables.Add(new FilmsDataTable(ds.Tables["Films"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace AIS_Kinoteatr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableEmployees = ((EmployeesDataTable)(base.Tables["Employees"]));
+            this.tableFilms = ((FilmsDataTable)(base.Tables["Films"]));
             if ((initTable == true)) {
-                if ((this.tableEmployees != null)) {
-                    this.tableEmployees.InitVars();
+                if ((this.tableFilms != null)) {
+                    this.tableFilms.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace AIS_Kinoteatr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "CinemaDataBaseDataSet";
+            this.DataSetName = "CinemaDataBaseDataSet2";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/CinemaDataBaseDataSet.xsd";
+            this.Namespace = "http://tempuri.org/CinemaDataBaseDataSet2.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableEmployees = new EmployeesDataTable();
-            base.Tables.Add(this.tableEmployees);
+            this.tableFilms = new FilmsDataTable();
+            base.Tables.Add(this.tableFilms);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeEmployees() {
+        private bool ShouldSerializeFilms() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace AIS_Kinoteatr {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            CinemaDataBaseDataSet ds = new CinemaDataBaseDataSet();
+            CinemaDataBaseDataSet2 ds = new CinemaDataBaseDataSet2();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,31 +270,31 @@ namespace AIS_Kinoteatr {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void EmployeesRowChangeEventHandler(object sender, EmployeesRowChangeEvent e);
+        public delegate void FilmsRowChangeEventHandler(object sender, FilmsRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class EmployeesDataTable : global::System.Data.TypedTableBase<EmployeesRow> {
+        public partial class FilmsDataTable : global::System.Data.TypedTableBase<FilmsRow> {
             
-            private global::System.Data.DataColumn columnДолжность;
+            private global::System.Data.DataColumn columnКод;
             
-            private global::System.Data.DataColumn columnПолное_имя;
+            private global::System.Data.DataColumn columnНазвание;
             
-            private global::System.Data.DataColumn columnНомер_паспорта;
+            private global::System.Data.DataColumn columnОписание;
             
-            private global::System.Data.DataColumn columnВозраст;
+            private global::System.Data.DataColumn columnЦена;
             
-            private global::System.Data.DataColumn columnАдрес;
+            private global::System.Data.DataColumn columnРежиссёр;
             
-            private global::System.Data.DataColumn columnУровень_доступа;
+            private global::System.Data.DataColumn columnСтрана;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesDataTable() {
-                this.TableName = "Employees";
+            public FilmsDataTable() {
+                this.TableName = "Films";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -302,7 +302,7 @@ namespace AIS_Kinoteatr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal EmployeesDataTable(global::System.Data.DataTable table) {
+            internal FilmsDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -319,56 +319,56 @@ namespace AIS_Kinoteatr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected EmployeesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected FilmsDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ДолжностьColumn {
+            public global::System.Data.DataColumn КодColumn {
                 get {
-                    return this.columnДолжность;
+                    return this.columnКод;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Полное_имяColumn {
+            public global::System.Data.DataColumn НазваниеColumn {
                 get {
-                    return this.columnПолное_имя;
+                    return this.columnНазвание;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Номер_паспортаColumn {
+            public global::System.Data.DataColumn ОписаниеColumn {
                 get {
-                    return this.columnНомер_паспорта;
+                    return this.columnОписание;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn ВозрастColumn {
+            public global::System.Data.DataColumn ЦенаColumn {
                 get {
-                    return this.columnВозраст;
+                    return this.columnЦена;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn АдресColumn {
+            public global::System.Data.DataColumn РежиссёрColumn {
                 get {
-                    return this.columnАдрес;
+                    return this.columnРежиссёр;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn Уровень_доступаColumn {
+            public global::System.Data.DataColumn СтранаColumn {
                 get {
-                    return this.columnУровень_доступа;
+                    return this.columnСтрана;
                 }
             }
             
@@ -383,50 +383,57 @@ namespace AIS_Kinoteatr {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow this[int index] {
+            public FilmsRow this[int index] {
                 get {
-                    return ((EmployeesRow)(this.Rows[index]));
+                    return ((FilmsRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event EmployeesRowChangeEventHandler EmployeesRowChanging;
+            public event FilmsRowChangeEventHandler FilmsRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event EmployeesRowChangeEventHandler EmployeesRowChanged;
+            public event FilmsRowChangeEventHandler FilmsRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event EmployeesRowChangeEventHandler EmployeesRowDeleting;
+            public event FilmsRowChangeEventHandler FilmsRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event EmployeesRowChangeEventHandler EmployeesRowDeleted;
+            public event FilmsRowChangeEventHandler FilmsRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddEmployeesRow(EmployeesRow row) {
+            public void AddFilmsRow(FilmsRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow AddEmployeesRow(string Должность, string Полное_имя, int Номер_паспорта, int Возраст, string Адрес, int Уровень_доступа) {
-                EmployeesRow rowEmployeesRow = ((EmployeesRow)(this.NewRow()));
+            public FilmsRow AddFilmsRow(string Код, string Название, string Описание, int Цена, string Режиссёр, string Страна) {
+                FilmsRow rowFilmsRow = ((FilmsRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Должность,
-                        Полное_имя,
-                        Номер_паспорта,
-                        Возраст,
-                        Адрес,
-                        Уровень_доступа};
-                rowEmployeesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowEmployeesRow);
-                return rowEmployeesRow;
+                        Код,
+                        Название,
+                        Описание,
+                        Цена,
+                        Режиссёр,
+                        Страна};
+                rowFilmsRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowFilmsRow);
+                return rowFilmsRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FilmsRow FindByКод(string Код) {
+                return ((FilmsRow)(this.Rows.Find(new object[] {
+                            Код})));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                EmployeesDataTable cln = ((EmployeesDataTable)(base.Clone()));
+                FilmsDataTable cln = ((FilmsDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -434,64 +441,70 @@ namespace AIS_Kinoteatr {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new EmployeesDataTable();
+                return new FilmsDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
-                this.columnДолжность = base.Columns["Должность"];
-                this.columnПолное_имя = base.Columns["Полное имя"];
-                this.columnНомер_паспорта = base.Columns["Номер паспорта"];
-                this.columnВозраст = base.Columns["Возраст"];
-                this.columnАдрес = base.Columns["Адрес"];
-                this.columnУровень_доступа = base.Columns["Уровень доступа"];
+                this.columnКод = base.Columns["Код"];
+                this.columnНазвание = base.Columns["Название"];
+                this.columnОписание = base.Columns["Описание"];
+                this.columnЦена = base.Columns["Цена"];
+                this.columnРежиссёр = base.Columns["Режиссёр"];
+                this.columnСтрана = base.Columns["Страна"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
-                this.columnДолжность = new global::System.Data.DataColumn("Должность", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnДолжность);
-                this.columnПолное_имя = new global::System.Data.DataColumn("Полное имя", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnПолное_имя);
-                this.columnНомер_паспорта = new global::System.Data.DataColumn("Номер паспорта", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnНомер_паспорта);
-                this.columnВозраст = new global::System.Data.DataColumn("Возраст", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnВозраст);
-                this.columnАдрес = new global::System.Data.DataColumn("Адрес", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnАдрес);
-                this.columnУровень_доступа = new global::System.Data.DataColumn("Уровень доступа", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnУровень_доступа);
-                this.columnДолжность.MaxLength = 255;
-                this.columnПолное_имя.MaxLength = 255;
-                this.columnАдрес.MaxLength = 255;
+                this.columnКод = new global::System.Data.DataColumn("Код", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnКод);
+                this.columnНазвание = new global::System.Data.DataColumn("Название", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnНазвание);
+                this.columnОписание = new global::System.Data.DataColumn("Описание", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnОписание);
+                this.columnЦена = new global::System.Data.DataColumn("Цена", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnЦена);
+                this.columnРежиссёр = new global::System.Data.DataColumn("Режиссёр", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnРежиссёр);
+                this.columnСтрана = new global::System.Data.DataColumn("Страна", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnСтрана);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnКод}, true));
+                this.columnКод.AllowDBNull = false;
+                this.columnКод.Unique = true;
+                this.columnКод.MaxLength = 255;
+                this.columnНазвание.MaxLength = 255;
+                this.columnОписание.MaxLength = 536870910;
+                this.columnРежиссёр.MaxLength = 255;
+                this.columnСтрана.MaxLength = 255;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow NewEmployeesRow() {
-                return ((EmployeesRow)(this.NewRow()));
+            public FilmsRow NewFilmsRow() {
+                return ((FilmsRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new EmployeesRow(builder);
+                return new FilmsRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(EmployeesRow);
+                return typeof(FilmsRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.EmployeesRowChanged != null)) {
-                    this.EmployeesRowChanged(this, new EmployeesRowChangeEvent(((EmployeesRow)(e.Row)), e.Action));
+                if ((this.FilmsRowChanged != null)) {
+                    this.FilmsRowChanged(this, new FilmsRowChangeEvent(((FilmsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -499,8 +512,8 @@ namespace AIS_Kinoteatr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.EmployeesRowChanging != null)) {
-                    this.EmployeesRowChanging(this, new EmployeesRowChangeEvent(((EmployeesRow)(e.Row)), e.Action));
+                if ((this.FilmsRowChanging != null)) {
+                    this.FilmsRowChanging(this, new FilmsRowChangeEvent(((FilmsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -508,8 +521,8 @@ namespace AIS_Kinoteatr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.EmployeesRowDeleted != null)) {
-                    this.EmployeesRowDeleted(this, new EmployeesRowChangeEvent(((EmployeesRow)(e.Row)), e.Action));
+                if ((this.FilmsRowDeleted != null)) {
+                    this.FilmsRowDeleted(this, new FilmsRowChangeEvent(((FilmsRow)(e.Row)), e.Action));
                 }
             }
             
@@ -517,14 +530,14 @@ namespace AIS_Kinoteatr {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.EmployeesRowDeleting != null)) {
-                    this.EmployeesRowDeleting(this, new EmployeesRowChangeEvent(((EmployeesRow)(e.Row)), e.Action));
+                if ((this.FilmsRowDeleting != null)) {
+                    this.FilmsRowDeleting(this, new FilmsRowChangeEvent(((FilmsRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveEmployeesRow(EmployeesRow row) {
+            public void RemoveFilmsRow(FilmsRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -533,7 +546,7 @@ namespace AIS_Kinoteatr {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                CinemaDataBaseDataSet ds = new CinemaDataBaseDataSet();
+                CinemaDataBaseDataSet2 ds = new CinemaDataBaseDataSet2();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -551,7 +564,7 @@ namespace AIS_Kinoteatr {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "EmployeesDataTable";
+                attribute2.FixedValue = "FilmsDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -595,183 +608,166 @@ namespace AIS_Kinoteatr {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class EmployeesRow : global::System.Data.DataRow {
+        public partial class FilmsRow : global::System.Data.DataRow {
             
-            private EmployeesDataTable tableEmployees;
+            private FilmsDataTable tableFilms;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal EmployeesRow(global::System.Data.DataRowBuilder rb) : 
+            internal FilmsRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableEmployees = ((EmployeesDataTable)(this.Table));
+                this.tableFilms = ((FilmsDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Должность {
+            public string Код {
+                get {
+                    return ((string)(this[this.tableFilms.КодColumn]));
+                }
+                set {
+                    this[this.tableFilms.КодColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string Название {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployees.ДолжностьColumn]));
+                        return ((string)(this[this.tableFilms.НазваниеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Должность\' в таблице \'Employees\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Название\' в таблице \'Films\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployees.ДолжностьColumn] = value;
+                    this[this.tableFilms.НазваниеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Полное_имя {
+            public string Описание {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployees.Полное_имяColumn]));
+                        return ((string)(this[this.tableFilms.ОписаниеColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Полное имя\' в таблице \'Employees\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Описание\' в таблице \'Films\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployees.Полное_имяColumn] = value;
+                    this[this.tableFilms.ОписаниеColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Номер_паспорта {
+            public int Цена {
                 get {
                     try {
-                        return ((int)(this[this.tableEmployees.Номер_паспортаColumn]));
+                        return ((int)(this[this.tableFilms.ЦенаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Номер паспорта\' в таблице \'Employees\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Цена\' в таблице \'Films\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployees.Номер_паспортаColumn] = value;
+                    this[this.tableFilms.ЦенаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Возраст {
+            public string Режиссёр {
                 get {
                     try {
-                        return ((int)(this[this.tableEmployees.ВозрастColumn]));
+                        return ((string)(this[this.tableFilms.РежиссёрColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Возраст\' в таблице \'Employees\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Режиссёр\' в таблице \'Films\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployees.ВозрастColumn] = value;
+                    this[this.tableFilms.РежиссёрColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string Адрес {
+            public string Страна {
                 get {
                     try {
-                        return ((string)(this[this.tableEmployees.АдресColumn]));
+                        return ((string)(this[this.tableFilms.СтранаColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Адрес\' в таблице \'Employees\' равно DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Страна\' в таблице \'Films\' равно DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmployees.АдресColumn] = value;
+                    this[this.tableFilms.СтранаColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public int Уровень_доступа {
-                get {
-                    try {
-                        return ((int)(this[this.tableEmployees.Уровень_доступаColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("Значение для столбца \'Уровень доступа\' в таблице \'Employees\' равно DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableEmployees.Уровень_доступаColumn] = value;
-                }
+            public bool IsНазваниеNull() {
+                return this.IsNull(this.tableFilms.НазваниеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsДолжностьNull() {
-                return this.IsNull(this.tableEmployees.ДолжностьColumn);
+            public void SetНазваниеNull() {
+                this[this.tableFilms.НазваниеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetДолжностьNull() {
-                this[this.tableEmployees.ДолжностьColumn] = global::System.Convert.DBNull;
+            public bool IsОписаниеNull() {
+                return this.IsNull(this.tableFilms.ОписаниеColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsПолное_имяNull() {
-                return this.IsNull(this.tableEmployees.Полное_имяColumn);
+            public void SetОписаниеNull() {
+                this[this.tableFilms.ОписаниеColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetПолное_имяNull() {
-                this[this.tableEmployees.Полное_имяColumn] = global::System.Convert.DBNull;
+            public bool IsЦенаNull() {
+                return this.IsNull(this.tableFilms.ЦенаColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsНомер_паспортаNull() {
-                return this.IsNull(this.tableEmployees.Номер_паспортаColumn);
+            public void SetЦенаNull() {
+                this[this.tableFilms.ЦенаColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetНомер_паспортаNull() {
-                this[this.tableEmployees.Номер_паспортаColumn] = global::System.Convert.DBNull;
+            public bool IsРежиссёрNull() {
+                return this.IsNull(this.tableFilms.РежиссёрColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsВозрастNull() {
-                return this.IsNull(this.tableEmployees.ВозрастColumn);
+            public void SetРежиссёрNull() {
+                this[this.tableFilms.РежиссёрColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetВозрастNull() {
-                this[this.tableEmployees.ВозрастColumn] = global::System.Convert.DBNull;
+            public bool IsСтранаNull() {
+                return this.IsNull(this.tableFilms.СтранаColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsАдресNull() {
-                return this.IsNull(this.tableEmployees.АдресColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetАдресNull() {
-                this[this.tableEmployees.АдресColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsУровень_доступаNull() {
-                return this.IsNull(this.tableEmployees.Уровень_доступаColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetУровень_доступаNull() {
-                this[this.tableEmployees.Уровень_доступаColumn] = global::System.Convert.DBNull;
+            public void SetСтранаNull() {
+                this[this.tableFilms.СтранаColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -779,22 +775,22 @@ namespace AIS_Kinoteatr {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class EmployeesRowChangeEvent : global::System.EventArgs {
+        public class FilmsRowChangeEvent : global::System.EventArgs {
             
-            private EmployeesRow eventRow;
+            private FilmsRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRowChangeEvent(EmployeesRow row, global::System.Data.DataRowAction action) {
+            public FilmsRowChangeEvent(FilmsRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmployeesRow Row {
+            public FilmsRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -810,7 +806,7 @@ namespace AIS_Kinoteatr {
         }
     }
 }
-namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
+namespace AIS_Kinoteatr.CinemaDataBaseDataSet2TableAdapters {
     
     
     /// <summary>
@@ -822,7 +818,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class EmployeesTableAdapter : global::System.ComponentModel.Component {
+    public partial class FilmsTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.OleDb.OleDbDataAdapter _adapter;
         
@@ -836,7 +832,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public EmployeesTableAdapter() {
+        public FilmsTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -933,25 +929,60 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
             this._adapter = new global::System.Data.OleDb.OleDbDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Employees";
-            tableMapping.ColumnMappings.Add("Должность", "Должность");
-            tableMapping.ColumnMappings.Add("Полное имя", "Полное имя");
-            tableMapping.ColumnMappings.Add("Номер паспорта", "Номер паспорта");
-            tableMapping.ColumnMappings.Add("Возраст", "Возраст");
-            tableMapping.ColumnMappings.Add("Адрес", "Адрес");
-            tableMapping.ColumnMappings.Add("Уровень доступа", "Уровень доступа");
+            tableMapping.DataSetTable = "Films";
+            tableMapping.ColumnMappings.Add("Код", "Код");
+            tableMapping.ColumnMappings.Add("Название", "Название");
+            tableMapping.ColumnMappings.Add("Описание", "Описание");
+            tableMapping.ColumnMappings.Add("Цена", "Цена");
+            tableMapping.ColumnMappings.Add("Режиссёр", "Режиссёр");
+            tableMapping.ColumnMappings.Add("Страна", "Страна");
             this._adapter.TableMappings.Add(tableMapping);
+            this._adapter.DeleteCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.DeleteCommand.Connection = this.Connection;
+            this._adapter.DeleteCommand.CommandText = "DELETE FROM `Films` WHERE ((`Код` = ?) AND ((? = 1 AND `Название` IS NULL) OR (`Н" +
+                "азвание` = ?)) AND ((? = 1 AND `Цена` IS NULL) OR (`Цена` = ?)) AND ((? = 1 AND " +
+                "`Режиссёр` IS NULL) OR (`Режиссёр` = ?)) AND ((? = 1 AND `Страна` IS NULL) OR (`" +
+                "Страна` = ?)))";
+            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Название", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Режиссёр", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Режиссёр", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Страна", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Страна", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Original, false, null));
             this._adapter.InsertCommand = new global::System.Data.OleDb.OleDbCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO `Employees` (`Должность`, `Полное имя`, `Номер паспорта`, `Возраст`, " +
-                "`Адрес`, `Уровень доступа`) VALUES (?, ?, ?, ?, ?, ?)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO `Films` (`Код`, `Название`, `Описание`, `Цена`, `Режиссёр`, `Страна`)" +
+                " VALUES (?, ?, ?, ?, ?, ?)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Должность", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Должность", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Полное_имя", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Полное имя", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Номер_паспорта", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Номер паспорта", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Возраст", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Возраст", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Адрес", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Адрес", global::System.Data.DataRowVersion.Current, false, null));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Уровень_доступа", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Уровень доступа", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Описание", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Описание", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Режиссёр", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Страна", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand = new global::System.Data.OleDb.OleDbCommand();
+            this._adapter.UpdateCommand.Connection = this.Connection;
+            this._adapter.UpdateCommand.CommandText = @"UPDATE `Films` SET `Код` = ?, `Название` = ?, `Описание` = ?, `Цена` = ?, `Режиссёр` = ?, `Страна` = ? WHERE ((`Код` = ?) AND ((? = 1 AND `Название` IS NULL) OR (`Название` = ?)) AND ((? = 1 AND `Цена` IS NULL) OR (`Цена` = ?)) AND ((? = 1 AND `Режиссёр` IS NULL) OR (`Режиссёр` = ?)) AND ((? = 1 AND `Страна` IS NULL) OR (`Страна` = ?)))";
+            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Код", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Название", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Описание", global::System.Data.OleDb.OleDbType.LongVarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Описание", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Режиссёр", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Страна", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Current, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Код", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Код", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Название", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Название", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Название", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Цена", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Цена", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Режиссёр", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Режиссёр", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Режиссёр", global::System.Data.DataRowVersion.Original, false, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("IsNull_Страна", global::System.Data.OleDb.OleDbType.Integer, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Original, true, null));
+            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.OleDb.OleDbParameter("Original_Страна", global::System.Data.OleDb.OleDbType.VarWChar, 0, global::System.Data.ParameterDirection.Input, ((byte)(0)), ((byte)(0)), "Страна", global::System.Data.DataRowVersion.Original, false, null));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -967,8 +998,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
             this._commandCollection = new global::System.Data.OleDb.OleDbCommand[1];
             this._commandCollection[0] = new global::System.Data.OleDb.OleDbCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT Должность, [Полное имя], [Номер паспорта], Возраст, Адрес, [Уровень доступ" +
-                "а] FROM Employees";
+            this._commandCollection[0].CommandText = "SELECT Код, Название, Описание, Цена, Режиссёр, Страна FROM Films";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -976,7 +1006,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(CinemaDataBaseDataSet.EmployeesDataTable dataTable) {
+        public virtual int Fill(CinemaDataBaseDataSet2.FilmsDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -989,9 +1019,9 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual CinemaDataBaseDataSet.EmployeesDataTable GetData() {
+        public virtual CinemaDataBaseDataSet2.FilmsDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            CinemaDataBaseDataSet.EmployeesDataTable dataTable = new CinemaDataBaseDataSet.EmployeesDataTable();
+            CinemaDataBaseDataSet2.FilmsDataTable dataTable = new CinemaDataBaseDataSet2.FilmsDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -999,15 +1029,15 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CinemaDataBaseDataSet.EmployeesDataTable dataTable) {
+        public virtual int Update(CinemaDataBaseDataSet2.FilmsDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(CinemaDataBaseDataSet dataSet) {
-            return this.Adapter.Update(dataSet, "Employees");
+        public virtual int Update(CinemaDataBaseDataSet2 dataSet) {
+            return this.Adapter.Update(dataSet, "Films");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1028,43 +1058,102 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(string Должность, string Полное_имя, global::System.Nullable<int> Номер_паспорта, global::System.Nullable<int> Возраст, string Адрес, global::System.Nullable<int> Уровень_доступа) {
-            if ((Должность == null)) {
-                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
+        public virtual int Delete(string Original_Код, string Original_Название, global::System.Nullable<int> Original_Цена, string Original_Режиссёр, string Original_Страна) {
+            if ((Original_Код == null)) {
+                throw new global::System.ArgumentNullException("Original_Код");
             }
             else {
-                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Должность));
+                this.Adapter.DeleteCommand.Parameters[0].Value = ((string)(Original_Код));
             }
-            if ((Полное_имя == null)) {
+            if ((Original_Название == null)) {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[1].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[2].Value = ((string)(Original_Название));
+            }
+            if ((Original_Цена.HasValue == true)) {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[4].Value = ((int)(Original_Цена.Value));
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[3].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Режиссёр == null)) {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[6].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[5].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[6].Value = ((string)(Original_Режиссёр));
+            }
+            if ((Original_Страна == null)) {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.DeleteCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.DeleteCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.DeleteCommand.Parameters[8].Value = ((string)(Original_Страна));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
+            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.DeleteCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.DeleteCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
+        public virtual int Insert(string Код, string Название, string Описание, global::System.Nullable<int> Цена, string Режиссёр, string Страна) {
+            if ((Код == null)) {
+                throw new global::System.ArgumentNullException("Код");
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((string)(Код));
+            }
+            if ((Название == null)) {
                 this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Полное_имя));
+                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Название));
             }
-            if ((Номер_паспорта.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[2].Value = ((int)(Номер_паспорта.Value));
-            }
-            else {
+            if ((Описание == null)) {
                 this.Adapter.InsertCommand.Parameters[2].Value = global::System.DBNull.Value;
             }
-            if ((Возраст.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Возраст.Value));
+            else {
+                this.Adapter.InsertCommand.Parameters[2].Value = ((string)(Описание));
+            }
+            if ((Цена.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[3].Value = ((int)(Цена.Value));
             }
             else {
                 this.Adapter.InsertCommand.Parameters[3].Value = global::System.DBNull.Value;
             }
-            if ((Адрес == null)) {
+            if ((Режиссёр == null)) {
                 this.Adapter.InsertCommand.Parameters[4].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Адрес));
+                this.Adapter.InsertCommand.Parameters[4].Value = ((string)(Режиссёр));
             }
-            if ((Уровень_доступа.HasValue == true)) {
-                this.Adapter.InsertCommand.Parameters[5].Value = ((int)(Уровень_доступа.Value));
+            if ((Страна == null)) {
+                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
             }
             else {
-                this.Adapter.InsertCommand.Parameters[5].Value = global::System.DBNull.Value;
+                this.Adapter.InsertCommand.Parameters[5].Value = ((string)(Страна));
             }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
@@ -1081,6 +1170,109 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
                 }
             }
         }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Код, string Название, string Описание, global::System.Nullable<int> Цена, string Режиссёр, string Страна, string Original_Код, string Original_Название, global::System.Nullable<int> Original_Цена, string Original_Режиссёр, string Original_Страна) {
+            if ((Код == null)) {
+                throw new global::System.ArgumentNullException("Код");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[0].Value = ((string)(Код));
+            }
+            if ((Название == null)) {
+                this.Adapter.UpdateCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Название));
+            }
+            if ((Описание == null)) {
+                this.Adapter.UpdateCommand.Parameters[2].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[2].Value = ((string)(Описание));
+            }
+            if ((Цена.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Цена.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[3].Value = global::System.DBNull.Value;
+            }
+            if ((Режиссёр == null)) {
+                this.Adapter.UpdateCommand.Parameters[4].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Режиссёр));
+            }
+            if ((Страна == null)) {
+                this.Adapter.UpdateCommand.Parameters[5].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[5].Value = ((string)(Страна));
+            }
+            if ((Original_Код == null)) {
+                throw new global::System.ArgumentNullException("Original_Код");
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[6].Value = ((string)(Original_Код));
+            }
+            if ((Original_Название == null)) {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[8].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[7].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[8].Value = ((string)(Original_Название));
+            }
+            if ((Original_Цена.HasValue == true)) {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[10].Value = ((int)(Original_Цена.Value));
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[9].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[10].Value = global::System.DBNull.Value;
+            }
+            if ((Original_Режиссёр == null)) {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[12].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[11].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[12].Value = ((string)(Original_Режиссёр));
+            }
+            if ((Original_Страна == null)) {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(1));
+                this.Adapter.UpdateCommand.Parameters[14].Value = global::System.DBNull.Value;
+            }
+            else {
+                this.Adapter.UpdateCommand.Parameters[13].Value = ((object)(0));
+                this.Adapter.UpdateCommand.Parameters[14].Value = ((string)(Original_Страна));
+            }
+            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
+            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
+                        != global::System.Data.ConnectionState.Open)) {
+                this.Adapter.UpdateCommand.Connection.Open();
+            }
+            try {
+                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
+                return returnValue;
+            }
+            finally {
+                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
+                    this.Adapter.UpdateCommand.Connection.Close();
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
+        public virtual int Update(string Название, string Описание, global::System.Nullable<int> Цена, string Режиссёр, string Страна, string Original_Код, string Original_Название, global::System.Nullable<int> Original_Цена, string Original_Режиссёр, string Original_Страна) {
+            return this.Update(Original_Код, Название, Описание, Цена, Режиссёр, Страна, Original_Код, Original_Название, Original_Цена, Original_Режиссёр, Original_Страна);
+        }
     }
     
     /// <summary>
@@ -1095,7 +1287,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private EmployeesTableAdapter _employeesTableAdapter;
+        private FilmsTableAdapter _filmsTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1117,12 +1309,12 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public EmployeesTableAdapter EmployeesTableAdapter {
+        public FilmsTableAdapter FilmsTableAdapter {
             get {
-                return this._employeesTableAdapter;
+                return this._filmsTableAdapter;
             }
             set {
-                this._employeesTableAdapter = value;
+                this._filmsTableAdapter = value;
             }
         }
         
@@ -1145,9 +1337,9 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._employeesTableAdapter != null) 
-                            && (this._employeesTableAdapter.Connection != null))) {
-                    return this._employeesTableAdapter.Connection;
+                if (((this._filmsTableAdapter != null) 
+                            && (this._filmsTableAdapter.Connection != null))) {
+                    return this._filmsTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1162,7 +1354,7 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._employeesTableAdapter != null)) {
+                if ((this._filmsTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1174,14 +1366,14 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateUpdatedRows(CinemaDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(CinemaDataBaseDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._employeesTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Employees.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._filmsTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.Films.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._employeesTableAdapter.Update(updatedRows));
+                    result = (result + this._filmsTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1193,13 +1385,13 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateInsertedRows(CinemaDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(CinemaDataBaseDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._employeesTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Employees.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._filmsTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.Films.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._employeesTableAdapter.Update(addedRows));
+                    result = (result + this._filmsTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1211,13 +1403,13 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private int UpdateDeletedRows(CinemaDataBaseDataSet dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(CinemaDataBaseDataSet2 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._employeesTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Employees.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._filmsTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.Films.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._employeesTableAdapter.Update(deletedRows));
+                    result = (result + this._filmsTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1253,15 +1445,15 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public virtual int UpdateAll(CinemaDataBaseDataSet dataSet) {
+        public virtual int UpdateAll(CinemaDataBaseDataSet2 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._employeesTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._employeesTableAdapter.Connection) == false))) {
+            if (((this._filmsTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._filmsTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("Все адаптеры таблицы, управляемые диспетчером адаптера таблицы TableAdapterManage" +
                         "r, должны использовать одинаковую строку подключения.");
             }
@@ -1297,13 +1489,13 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._employeesTableAdapter != null)) {
-                    revertConnections.Add(this._employeesTableAdapter, this._employeesTableAdapter.Connection);
-                    this._employeesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
-                    this._employeesTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
-                    if (this._employeesTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._employeesTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._employeesTableAdapter.Adapter);
+                if ((this._filmsTableAdapter != null)) {
+                    revertConnections.Add(this._filmsTableAdapter, this._filmsTableAdapter.Connection);
+                    this._filmsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(workConnection));
+                    this._filmsTableAdapter.Transaction = ((global::System.Data.OleDb.OleDbTransaction)(workTransaction));
+                    if (this._filmsTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._filmsTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._filmsTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1364,9 +1556,9 @@ namespace AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._employeesTableAdapter != null)) {
-                    this._employeesTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._employeesTableAdapter]));
-                    this._employeesTableAdapter.Transaction = null;
+                if ((this._filmsTableAdapter != null)) {
+                    this._filmsTableAdapter.Connection = ((global::System.Data.OleDb.OleDbConnection)(revertConnections[this._filmsTableAdapter]));
+                    this._filmsTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];

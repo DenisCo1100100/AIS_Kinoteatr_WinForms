@@ -15,11 +15,11 @@ namespace AIS_Kinoteatr
         public Authentication(string login, string password) 
             : base(login, password) {}
 
-        public override void Execute()
+        public void Execute()
         {
             OleDbConnect.Open();
 
-            string query = $"SELECT * FROM Users WHERE Login = '{Login}' AND Password = '{Password}'";
+            string query = $"SELECT * FROM Employees WHERE Логин = '{Login}' AND Пароль = '{Password}'";
             OleDbCommand command = new OleDbCommand(query, OleDbConnect);
 
             OleDbDataReader reader = command.ExecuteReader();

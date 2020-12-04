@@ -30,165 +30,154 @@ namespace AIS_Kinoteatr
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.employees = new System.Windows.Forms.DataGridView();
-            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cinemaDataBaseDataSet1 = new AIS_Kinoteatr.CinemaDataBaseDataSet1();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.cinemaDataBaseDataSet = new AIS_Kinoteatr.CinemaDataBaseDataSet();
-            this.cinemaDataBaseDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.employeesTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet1TableAdapters.EmployeesTableAdapter();
-            this.registeredUsersDataSet = new AIS_Kinoteatr.RegisteredUsersDataSet();
-            this.usersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.usersTableAdapter = new AIS_Kinoteatr.RegisteredUsersDataSetTableAdapters.UsersTableAdapter();
-            this.loginDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.functionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pasportNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ageDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.employees)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).BeginInit();
+            this.employeesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.employeesTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSetTableAdapters.EmployeesTableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registeredUsersDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
-            // employees
+            // dataGridView1
             // 
-            this.employees.AutoGenerateColumns = false;
-            this.employees.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells;
-            this.employees.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
-            this.employees.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.employees.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.loginDataGridViewTextBoxColumn,
-            this.functionDataGridViewTextBoxColumn,
-            this.fullNameDataGridViewTextBoxColumn,
-            this.pasportNumberDataGridViewTextBoxColumn,
-            this.ageDataGridViewTextBoxColumn,
-            this.addressDataGridViewTextBoxColumn});
-            this.employees.DataSource = this.usersBindingSource;
-            this.employees.Location = new System.Drawing.Point(12, 12);
-            this.employees.Name = "employees";
-            this.employees.Size = new System.Drawing.Size(776, 317);
-            this.employees.TabIndex = 0;
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6});
+            this.dataGridView1.DataSource = this.employeesBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(855, 246);
+            this.dataGridView1.TabIndex = 0;
             // 
-            // employeesBindingSource
+            // button1
             // 
-            this.employeesBindingSource.DataMember = "Employees";
-            this.employeesBindingSource.DataSource = this.cinemaDataBaseDataSet1;
+            this.button1.Location = new System.Drawing.Point(792, 415);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Назад";
+            this.button1.UseVisualStyleBackColor = true;
             // 
-            // cinemaDataBaseDataSet1
+            // button2
             // 
-            this.cinemaDataBaseDataSet1.DataSetName = "CinemaDataBaseDataSet1";
-            this.cinemaDataBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.button2.Location = new System.Drawing.Point(344, 329);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Обновить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.update_Click);
             // 
             // cinemaDataBaseDataSet
             // 
             this.cinemaDataBaseDataSet.DataSetName = "CinemaDataBaseDataSet";
             this.cinemaDataBaseDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cinemaDataBaseDataSetBindingSource
+            // employeesBindingSource
             // 
-            this.cinemaDataBaseDataSetBindingSource.DataSource = this.cinemaDataBaseDataSet;
-            this.cinemaDataBaseDataSetBindingSource.Position = 0;
+            this.employeesBindingSource.DataMember = "Employees";
+            this.employeesBindingSource.DataSource = this.cinemaDataBaseDataSet;
             // 
             // employeesTableAdapter
             // 
             this.employeesTableAdapter.ClearBeforeFill = true;
             // 
-            // registeredUsersDataSet
+            // dataGridViewTextBoxColumn1
             // 
-            this.registeredUsersDataSet.DataSetName = "RegisteredUsersDataSet";
-            this.registeredUsersDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Должность";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Должность";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // usersBindingSource
+            // dataGridViewTextBoxColumn2
             // 
-            this.usersBindingSource.DataMember = "Users";
-            this.usersBindingSource.DataSource = this.registeredUsersDataSet;
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Полное имя";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Полное имя";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
-            // usersTableAdapter
+            // dataGridViewTextBoxColumn3
             // 
-            this.usersTableAdapter.ClearBeforeFill = true;
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Номер паспорта";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Номер паспорта";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             // 
-            // loginDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn4
             // 
-            this.loginDataGridViewTextBoxColumn.DataPropertyName = "Login";
-            this.loginDataGridViewTextBoxColumn.HeaderText = "Login";
-            this.loginDataGridViewTextBoxColumn.Name = "loginDataGridViewTextBoxColumn";
-            this.loginDataGridViewTextBoxColumn.Width = 58;
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Возраст";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Возраст";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             // 
-            // functionDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn5
             // 
-            this.functionDataGridViewTextBoxColumn.DataPropertyName = "Function";
-            this.functionDataGridViewTextBoxColumn.HeaderText = "Function";
-            this.functionDataGridViewTextBoxColumn.Name = "functionDataGridViewTextBoxColumn";
-            this.functionDataGridViewTextBoxColumn.Width = 73;
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Адрес";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Адрес";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
-            // fullNameDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn6
             // 
-            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
-            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
-            this.fullNameDataGridViewTextBoxColumn.Width = 76;
-            // 
-            // pasportNumberDataGridViewTextBoxColumn
-            // 
-            this.pasportNumberDataGridViewTextBoxColumn.DataPropertyName = "PasportNumber";
-            this.pasportNumberDataGridViewTextBoxColumn.HeaderText = "PasportNumber";
-            this.pasportNumberDataGridViewTextBoxColumn.Name = "pasportNumberDataGridViewTextBoxColumn";
-            this.pasportNumberDataGridViewTextBoxColumn.Width = 105;
-            // 
-            // ageDataGridViewTextBoxColumn
-            // 
-            this.ageDataGridViewTextBoxColumn.DataPropertyName = "Age";
-            this.ageDataGridViewTextBoxColumn.HeaderText = "Age";
-            this.ageDataGridViewTextBoxColumn.Name = "ageDataGridViewTextBoxColumn";
-            this.ageDataGridViewTextBoxColumn.Width = 51;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Address";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.Width = 70;
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Уровень доступа";
+            this.dataGridViewTextBoxColumn6.HeaderText = "Уровень доступа";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             // 
             // EmployeesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.employees);
+            this.ClientSize = new System.Drawing.Size(879, 450);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.dataGridView1);
             this.Name = "EmployeesForm";
             this.Text = "Сотрудники";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.employees)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registeredUsersDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.usersBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.employeesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView employees;
-        private System.Windows.Forms.BindingSource cinemaDataBaseDataSetBindingSource;
-        private CinemaDataBaseDataSet cinemaDataBaseDataSet;
-        private CinemaDataBaseDataSet1 cinemaDataBaseDataSet1;
-        private System.Windows.Forms.BindingSource employeesBindingSource;
-        private CinemaDataBaseDataSet1TableAdapters.EmployeesTableAdapter employeesTableAdapter;
-        private RegisteredUsersDataSet registeredUsersDataSet;
-        private System.Windows.Forms.BindingSource usersBindingSource;
-        private RegisteredUsersDataSetTableAdapters.UsersTableAdapter usersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn loginDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.DataGridViewTextBoxColumn functionDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pasportNumberDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ageDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn accsesRightsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn должностьDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn полноеИмяDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn номерПаспортаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn возрастDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn адресDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn уровеньДоступаDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Button button2;
+        private CinemaDataBaseDataSet cinemaDataBaseDataSet;
+        private System.Windows.Forms.BindingSource employeesBindingSource;
+        private CinemaDataBaseDataSetTableAdapters.EmployeesTableAdapter employeesTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
     }
 }

@@ -31,114 +31,116 @@ namespace AIS_Kinoteatr
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.cinemaDataBaseDataSet3 = new AIS_Kinoteatr.CinemaDataBaseDataSet3();
+            this.cinemaDataBaseDataSet1 = new AIS_Kinoteatr.CinemaDataBaseDataSet1();
             this.clientsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.clientsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet3TableAdapters.ClientsTableAdapter();
-            this.кодDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.фамилияDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.имяDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.отчествоDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.адресDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.паспортDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.датаРегистрацииDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.предоставитьСкидкуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet1TableAdapters.ClientsTableAdapter();
+            this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.кодDataGridViewTextBoxColumn,
-            this.фамилияDataGridViewTextBoxColumn,
-            this.имяDataGridViewTextBoxColumn,
-            this.отчествоDataGridViewTextBoxColumn,
-            this.адресDataGridViewTextBoxColumn,
-            this.паспортDataGridViewTextBoxColumn,
-            this.датаРегистрацииDataGridViewTextBoxColumn,
-            this.предоставитьСкидкуDataGridViewTextBoxColumn});
+            this.dataGridViewTextBoxColumn9,
+            this.dataGridViewTextBoxColumn10,
+            this.dataGridViewTextBoxColumn11,
+            this.dataGridViewTextBoxColumn12,
+            this.dataGridViewTextBoxColumn13,
+            this.dataGridViewTextBoxColumn14,
+            this.dataGridViewTextBoxColumn15,
+            this.dataGridViewTextBoxColumn16});
             this.dataGridView1.DataSource = this.clientsBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(859, 205);
             this.dataGridView1.TabIndex = 0;
             // 
-            // cinemaDataBaseDataSet3
+            // cinemaDataBaseDataSet1
             // 
-            this.cinemaDataBaseDataSet3.DataSetName = "CinemaDataBaseDataSet3";
-            this.cinemaDataBaseDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.cinemaDataBaseDataSet1.DataSetName = "CinemaDataBaseDataSet1";
+            this.cinemaDataBaseDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // clientsBindingSource
             // 
             this.clientsBindingSource.DataMember = "Clients";
-            this.clientsBindingSource.DataSource = this.cinemaDataBaseDataSet3;
+            this.clientsBindingSource.DataSource = this.cinemaDataBaseDataSet1;
             // 
             // clientsTableAdapter
             // 
             this.clientsTableAdapter.ClearBeforeFill = true;
             // 
-            // кодDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn9
             // 
-            this.кодDataGridViewTextBoxColumn.DataPropertyName = "Код";
-            this.кодDataGridViewTextBoxColumn.HeaderText = "Код";
-            this.кодDataGridViewTextBoxColumn.Name = "кодDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn9.DataPropertyName = "Код";
+            this.dataGridViewTextBoxColumn9.HeaderText = "Код";
+            this.dataGridViewTextBoxColumn9.Name = "dataGridViewTextBoxColumn9";
             // 
-            // фамилияDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn10
             // 
-            this.фамилияDataGridViewTextBoxColumn.DataPropertyName = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.HeaderText = "Фамилия";
-            this.фамилияDataGridViewTextBoxColumn.Name = "фамилияDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn10.DataPropertyName = "Фамилия";
+            this.dataGridViewTextBoxColumn10.HeaderText = "Фамилия";
+            this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
-            // имяDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn11
             // 
-            this.имяDataGridViewTextBoxColumn.DataPropertyName = "Имя";
-            this.имяDataGridViewTextBoxColumn.HeaderText = "Имя";
-            this.имяDataGridViewTextBoxColumn.Name = "имяDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn11.DataPropertyName = "Имя";
+            this.dataGridViewTextBoxColumn11.HeaderText = "Имя";
+            this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             // 
-            // отчествоDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn12
             // 
-            this.отчествоDataGridViewTextBoxColumn.DataPropertyName = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.HeaderText = "Отчество";
-            this.отчествоDataGridViewTextBoxColumn.Name = "отчествоDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn12.DataPropertyName = "Отчество";
+            this.dataGridViewTextBoxColumn12.HeaderText = "Отчество";
+            this.dataGridViewTextBoxColumn12.Name = "dataGridViewTextBoxColumn12";
             // 
-            // адресDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn13
             // 
-            this.адресDataGridViewTextBoxColumn.DataPropertyName = "Адрес";
-            this.адресDataGridViewTextBoxColumn.HeaderText = "Адрес";
-            this.адресDataGridViewTextBoxColumn.Name = "адресDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn13.DataPropertyName = "Адрес";
+            this.dataGridViewTextBoxColumn13.HeaderText = "Адрес";
+            this.dataGridViewTextBoxColumn13.Name = "dataGridViewTextBoxColumn13";
             // 
-            // паспортDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn14
             // 
-            this.паспортDataGridViewTextBoxColumn.DataPropertyName = "Паспорт";
-            this.паспортDataGridViewTextBoxColumn.HeaderText = "Паспорт";
-            this.паспортDataGridViewTextBoxColumn.Name = "паспортDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn14.DataPropertyName = "Паспорт";
+            this.dataGridViewTextBoxColumn14.HeaderText = "Паспорт";
+            this.dataGridViewTextBoxColumn14.Name = "dataGridViewTextBoxColumn14";
             // 
-            // датаРегистрацииDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn15
             // 
-            this.датаРегистрацииDataGridViewTextBoxColumn.DataPropertyName = "Дата регистрации";
-            this.датаРегистрацииDataGridViewTextBoxColumn.HeaderText = "Дата регистрации";
-            this.датаРегистрацииDataGridViewTextBoxColumn.Name = "датаРегистрацииDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn15.DataPropertyName = "Дата регистрации";
+            this.dataGridViewTextBoxColumn15.HeaderText = "Дата регистрации";
+            this.dataGridViewTextBoxColumn15.Name = "dataGridViewTextBoxColumn15";
             // 
-            // предоставитьСкидкуDataGridViewTextBoxColumn
+            // dataGridViewTextBoxColumn16
             // 
-            this.предоставитьСкидкуDataGridViewTextBoxColumn.DataPropertyName = "Предоставить скидку";
-            this.предоставитьСкидкуDataGridViewTextBoxColumn.HeaderText = "Предоставить скидку";
-            this.предоставитьСкидкуDataGridViewTextBoxColumn.Name = "предоставитьСкидкуDataGridViewTextBoxColumn";
+            this.dataGridViewTextBoxColumn16.DataPropertyName = "Предоставить скидку";
+            this.dataGridViewTextBoxColumn16.HeaderText = "Предоставить скидку";
+            this.dataGridViewTextBoxColumn16.Name = "dataGridViewTextBoxColumn16";
             // 
             // ClientsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(883, 450);
             this.Controls.Add(this.dataGridView1);
             this.Name = "ClientsForm";
-            this.Text = "ClientsForm";
+            this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.ClientsForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -147,9 +149,6 @@ namespace AIS_Kinoteatr
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private CinemaDataBaseDataSet3 cinemaDataBaseDataSet3;
-        private System.Windows.Forms.BindingSource clientsBindingSource;
-        private CinemaDataBaseDataSet3TableAdapters.ClientsTableAdapter clientsTableAdapter;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn;
@@ -158,5 +157,24 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn паспортDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn датаРегистрацииDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn предоставитьСкидкуDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private CinemaDataBaseDataSet1 cinemaDataBaseDataSet1;
+        private System.Windows.Forms.BindingSource clientsBindingSource;
+        private CinemaDataBaseDataSet1TableAdapters.ClientsTableAdapter clientsTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn13;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
     }
 }

@@ -27,6 +27,7 @@ namespace AIS_Kinoteatr
         {
             //Authentication authentication = new Authentication(Login, Password);
             Authentication authentication = new Authentication("Admin2", "2222");
+            authentication.Execute();
             authentication.RunAuthentication();
         }
     }
