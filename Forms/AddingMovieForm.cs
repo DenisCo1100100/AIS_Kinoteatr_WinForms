@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Data.OleDb;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AIS_Kinoteatr
@@ -33,13 +27,13 @@ namespace AIS_Kinoteatr
             pictureBox1.Image = Image.FromStream(openFileDialog1.OpenFile());
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void addImage_Click(object sender, EventArgs e)
         {
             if (openFileDialog1.ShowDialog() == DialogResult.Cancel)
                 return;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void complite_Click(object sender, EventArgs e)
         {
             pictureBox1.Image.Save($@"{Application.StartupPath}\FilmsImage\{ImageName}.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
 
@@ -50,26 +44,16 @@ namespace AIS_Kinoteatr
                 Convert.ToInt32(priceTextBox.Text),
                 descriptRichBox.Text,
                 ImageName.ToString());
-
             moviesTable.Add();
-        }
 
-        OleDbDataAdapter adap = new OleDbDataAdapter();
-        DataTable dt = new DataTable();
+            MessageBox.Show("Фильм добавлен!", "Готово");
+            this.Close();
+        }
 
         private void AddingMovieForm_FormClosed(object sender, FormClosedEventArgs e)
         {
-            DataSet dataSet = new DataSet(); 
-            OleDbConnection con = new OleDbConnection($@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = CinemaDataBase.mdb;");
-            OleDbCommand command = new OleDbCommand();
-            command.Connection = con;
-            command.CommandText = "Select * from Films";
-            con.Open();
-            adap.SelectCommand = command;
-            adap.Fill(dataSet);
-            dt = dataSet.Tables[0];
-            AssortmentDataGrid.DataSource = dt;
-            con.Close();
+            DataGridViewControll gridViewControll = new DataGridViewControll();
+            gridViewControll.Update(AssortmentDataGrid, "Films");
         }
     }
 }

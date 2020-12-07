@@ -30,24 +30,25 @@ namespace AIS_Kinoteatr
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.assortmentTable = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.cinemaDataBaseDataSet2 = new AIS_Kinoteatr.CinemaDataBaseDataSet2();
-            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet2TableAdapters.FilmsTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.filmsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cinemaDataBaseDataSet2 = new AIS_Kinoteatr.CinemaDataBaseDataSet2();
+            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet2TableAdapters.FilmsTableAdapter();
+            this.exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // assortmentTable
@@ -65,65 +66,22 @@ namespace AIS_Kinoteatr
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
             this.assortmentTable.DataSource = this.filmsBindingSource;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.assortmentTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.assortmentTable.DefaultCellStyle = dataGridViewCellStyle1;
             this.assortmentTable.Location = new System.Drawing.Point(232, 12);
             this.assortmentTable.Name = "assortmentTable";
             this.assortmentTable.RowHeadersVisible = false;
             this.assortmentTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.assortmentTable.Size = new System.Drawing.Size(802, 409);
+            this.assortmentTable.Size = new System.Drawing.Size(802, 361);
             this.assortmentTable.StandardTab = true;
             this.assortmentTable.TabIndex = 0;
             this.assortmentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssortmentTable_CellClick);
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 274);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(214, 29);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Добавить фильм";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(214, 256);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(12, 309);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(214, 29);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Обновить";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.update_Click);
-            // 
-            // cinemaDataBaseDataSet2
-            // 
-            this.cinemaDataBaseDataSet2.DataSetName = "CinemaDataBaseDataSet2";
-            this.cinemaDataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // filmsBindingSource
-            // 
-            this.filmsBindingSource.DataMember = "Films";
-            this.filmsBindingSource.DataSource = this.cinemaDataBaseDataSet2;
-            // 
-            // filmsTableAdapter
-            // 
-            this.filmsTableAdapter.ClearBeforeFill = true;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -167,12 +125,66 @@ namespace AIS_Kinoteatr
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.Width = 68;
             // 
+            // filmsBindingSource
+            // 
+            this.filmsBindingSource.DataMember = "Films";
+            this.filmsBindingSource.DataSource = this.cinemaDataBaseDataSet2;
+            // 
+            // cinemaDataBaseDataSet2
+            // 
+            this.cinemaDataBaseDataSet2.DataSetName = "CinemaDataBaseDataSet2";
+            this.cinemaDataBaseDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(12, 274);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(214, 29);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "Добавить фильм";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(214, 256);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(12, 309);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(214, 29);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Обновить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.update_Click);
+            // 
+            // filmsTableAdapter
+            // 
+            this.filmsTableAdapter.ClearBeforeFill = true;
+            // 
+            // exit
+            // 
+            this.exit.Location = new System.Drawing.Point(12, 344);
+            this.exit.Name = "exit";
+            this.exit.Size = new System.Drawing.Size(214, 29);
+            this.exit.TabIndex = 4;
+            this.exit.Text = "Назад";
+            this.exit.UseVisualStyleBackColor = true;
+            this.exit.Click += new System.EventHandler(this.exit_Click);
+            // 
             // AssortmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1046, 433);
+            this.ClientSize = new System.Drawing.Size(1046, 384);
+            this.Controls.Add(this.exit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.pictureBox1);
@@ -182,9 +194,9 @@ namespace AIS_Kinoteatr
             this.Text = "Ассортимент";
             this.Load += new System.EventHandler(this.Assortment_Load);
             ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -210,5 +222,6 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.Button exit;
     }
 }

@@ -40,9 +40,9 @@ namespace AIS_Kinoteatr
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.priceTextBox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addImage = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.complite = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -149,16 +149,16 @@ namespace AIS_Kinoteatr
             this.priceTextBox.Size = new System.Drawing.Size(60, 23);
             this.priceTextBox.TabIndex = 9;
             // 
-            // button1
+            // addImage
             // 
-            this.button1.Location = new System.Drawing.Point(16, 264);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 28);
-            this.button1.TabIndex = 11;
-            this.button1.Text = "Добавить картинку";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.addImage.Location = new System.Drawing.Point(16, 264);
+            this.addImage.Margin = new System.Windows.Forms.Padding(4);
+            this.addImage.Name = "addImage";
+            this.addImage.Size = new System.Drawing.Size(236, 28);
+            this.addImage.TabIndex = 11;
+            this.addImage.Text = "Добавить картинку";
+            this.addImage.UseVisualStyleBackColor = true;
+            this.addImage.Click += new System.EventHandler(this.addImage_Click);
             // 
             // label6
             // 
@@ -171,15 +171,15 @@ namespace AIS_Kinoteatr
             this.label6.TabIndex = 12;
             this.label6.Text = "BYN";
             // 
-            // button2
+            // complite
             // 
-            this.button2.Location = new System.Drawing.Point(200, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(152, 29);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Готово!";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.complite.Location = new System.Drawing.Point(200, 299);
+            this.complite.Name = "complite";
+            this.complite.Size = new System.Drawing.Size(152, 29);
+            this.complite.TabIndex = 13;
+            this.complite.Text = "Готово!";
+            this.complite.UseVisualStyleBackColor = true;
+            this.complite.Click += new System.EventHandler(this.complite_Click);
             // 
             // openFileDialog1
             // 
@@ -190,9 +190,9 @@ namespace AIS_Kinoteatr
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(545, 340);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.complite);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.addImage);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.priceTextBox);
             this.Controls.Add(this.label4);
@@ -228,9 +228,9 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox priceTextBox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button addImage;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button complite;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
