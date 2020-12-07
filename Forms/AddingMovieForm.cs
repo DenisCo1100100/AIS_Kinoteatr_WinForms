@@ -54,10 +54,22 @@ namespace AIS_Kinoteatr
             moviesTable.Add();
         }
 
+        OleDbDataAdapter adap = new OleDbDataAdapter();
+        DataTable dt = new DataTable();
+
         private void AddingMovieForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             DataSet dataSet = new DataSet(); 
-            OleDbConnection com = new OleDbConnection($@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = CinemaDataBase.mdb;");
+            OleDbConnection con = new OleDbConnection($@"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = CinemaDataBase.mdb;");
+            OleDbCommand command = new OleDbCommand();
+            command.Connection = con;
+            command.CommandText = "Select * from Films";
+            con.Open();
+            adap.SelectCommand = command;
+            adap.Fill(dataSet);
+            dt = dataSet.Tables[0];
+            AssortmentDataGrid.DataSource = dt;
+            con.Close();
         }
     }
 }

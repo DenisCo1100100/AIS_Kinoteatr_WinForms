@@ -24,7 +24,7 @@ namespace AIS_Kinoteatr
         {
             int imageIndex = 0;
 
-            if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0 && assortmentTable[0, e.RowIndex].Value.ToString() != "")
             {
                 imageIndex = Convert.ToInt32(assortmentTable[0, e.RowIndex].Value);
             }
