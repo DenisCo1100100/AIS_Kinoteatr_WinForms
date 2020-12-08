@@ -99,7 +99,7 @@
       <DependentUpon>EmployeesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\DataGridViewControll.cs" />
-    <Compile Include="Model\MoviesTableMenager.cs" />
+    <Compile Include="Model\TableMenager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\RegistrationForm.cs">

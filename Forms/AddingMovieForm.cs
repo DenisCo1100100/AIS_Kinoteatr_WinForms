@@ -36,15 +36,20 @@ namespace AIS_Kinoteatr
         private void complite_Click(object sender, EventArgs e)
         {
             pictureBox1.Image.Save($@"{Application.StartupPath}\FilmsImage\{ImageName}.jpeg", System.Drawing.Imaging.ImageFormat.Jpeg);
+            
+            string imageIndex = ImageName.ToString();
+            int price = Convert.ToInt32(priceTextBox.Text);
 
-            MoviesTableMenager moviesTable = new MoviesTableMenager(
-                nameTextBox.Text, 
-                directorTextBox.Text, 
-                CountryTextBox.Text,
-                Convert.ToInt32(priceTextBox.Text),
-                descriptRichBox.Text,
-                ImageName.ToString());
-            moviesTable.Add();
+            string cmdText = $"INSERT INTO Films ([Код], [Название], [Описание], [Цена], [Режиссёр], [Страна]) VALUES (" +
+                $"'" + imageIndex + "'," +
+                " '" + nameTextBox.Text + "'," +
+                " '" + descriptRichBox.Text + "'," +
+                " '" + price + "'," +
+                " '" + directorTextBox.Text + "'," +
+                " '" + CountryTextBox.Text + "')";
+
+            TableMenager moviesTable = new TableMenager();
+            moviesTable.Add(cmdText);
 
             MessageBox.Show("Фильм добавлен!", "Готово");
             this.Close();
