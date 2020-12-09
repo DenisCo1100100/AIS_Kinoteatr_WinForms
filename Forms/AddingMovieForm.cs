@@ -40,7 +40,7 @@ namespace AIS_Kinoteatr
             string imageIndex = ImageName.ToString();
             int price = Convert.ToInt32(priceTextBox.Text);
 
-            string cmdText = $"INSERT INTO Films ([Код], [Название], [Описание], [Цена], [Режиссёр], [Страна]) VALUES (" +
+            string request = $"INSERT INTO Films ([Код], [Название], [Описание], [Цена], [Режиссёр], [Страна]) VALUES (" +
                 $"'" + imageIndex + "'," +
                 " '" + nameTextBox.Text + "'," +
                 " '" + descriptRichBox.Text + "'," +
@@ -49,7 +49,7 @@ namespace AIS_Kinoteatr
                 " '" + CountryTextBox.Text + "')";
 
             TableMenager moviesTable = new TableMenager();
-            moviesTable.Add(cmdText);
+            moviesTable.ExecuteRequest(request);
 
             MessageBox.Show("Фильм добавлен!", "Готово");
             this.Close();

@@ -45,6 +45,7 @@ namespace AIS_Kinoteatr
             this.button2 = new System.Windows.Forms.Button();
             this.filmsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet2TableAdapters.FilmsTableAdapter();
             this.exit = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.assortmentTable)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.filmsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet2)).BeginInit();
@@ -78,7 +79,7 @@ namespace AIS_Kinoteatr
             this.assortmentTable.Name = "assortmentTable";
             this.assortmentTable.RowHeadersVisible = false;
             this.assortmentTable.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.assortmentTable.Size = new System.Drawing.Size(802, 361);
+            this.assortmentTable.Size = new System.Drawing.Size(802, 396);
             this.assortmentTable.StandardTab = true;
             this.assortmentTable.TabIndex = 0;
             this.assortmentTable.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.AssortmentTable_CellClick);
@@ -170,7 +171,7 @@ namespace AIS_Kinoteatr
             // 
             // exit
             // 
-            this.exit.Location = new System.Drawing.Point(12, 344);
+            this.exit.Location = new System.Drawing.Point(12, 379);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(214, 29);
             this.exit.TabIndex = 4;
@@ -178,12 +179,23 @@ namespace AIS_Kinoteatr
             this.exit.UseVisualStyleBackColor = true;
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(12, 344);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(214, 29);
+            this.button3.TabIndex = 5;
+            this.button3.Text = "Удалить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.delete_Click);
+            // 
             // AssortmentForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(1046, 384);
+            this.ClientSize = new System.Drawing.Size(1046, 427);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -223,5 +235,6 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.Button exit;
+        private System.Windows.Forms.Button button3;
     }
 }

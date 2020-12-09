@@ -30,7 +30,7 @@ namespace AIS_Kinoteatr
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.clientsGridView = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,20 +43,20 @@ namespace AIS_Kinoteatr
             this.cinemaDataBaseDataSet1 = new AIS_Kinoteatr.CinemaDataBaseDataSet1();
             this.clientsTableAdapter = new AIS_Kinoteatr.CinemaDataBaseDataSet1TableAdapters.ClientsTableAdapter();
             this.addClient = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.delete = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // clientsGridView
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.clientsGridView.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clientsGridView.AutoGenerateColumns = false;
+            this.clientsGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.clientsGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
@@ -65,11 +65,12 @@ namespace AIS_Kinoteatr
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            this.dataGridView1.DataSource = this.clientsBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(859, 205);
-            this.dataGridView1.TabIndex = 0;
+            this.clientsGridView.DataSource = this.clientsBindingSource;
+            this.clientsGridView.Location = new System.Drawing.Point(12, 12);
+            this.clientsGridView.Name = "clientsGridView";
+            this.clientsGridView.Size = new System.Drawing.Size(859, 205);
+            this.clientsGridView.TabIndex = 0;
+            this.clientsGridView.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.clientsGridView_CellClick);
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -144,15 +145,16 @@ namespace AIS_Kinoteatr
             this.addClient.UseVisualStyleBackColor = true;
             this.addClient.Click += new System.EventHandler(this.addClient_Click);
             // 
-            // button1
+            // delete
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(298, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(197, 84);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
+            this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.delete.Location = new System.Drawing.Point(298, 223);
+            this.delete.Name = "delete";
+            this.delete.Size = new System.Drawing.Size(197, 84);
+            this.delete.TabIndex = 2;
+            this.delete.Text = "Удалить";
+            this.delete.UseVisualStyleBackColor = true;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // button2
             // 
@@ -170,13 +172,13 @@ namespace AIS_Kinoteatr
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 450);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.delete);
             this.Controls.Add(this.addClient);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.clientsGridView);
             this.Name = "ClientsForm";
             this.Text = "Клиенты";
             this.Load += new System.EventHandler(this.ClientsForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientsGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clientsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cinemaDataBaseDataSet1)).EndInit();
             this.ResumeLayout(false);
@@ -185,7 +187,7 @@ namespace AIS_Kinoteatr
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView clientsGridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn кодDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn фамилияDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn имяDataGridViewTextBoxColumn;
@@ -214,7 +216,7 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn15;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn16;
         private System.Windows.Forms.Button addClient;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button delete;
         private System.Windows.Forms.Button button2;
     }
 }

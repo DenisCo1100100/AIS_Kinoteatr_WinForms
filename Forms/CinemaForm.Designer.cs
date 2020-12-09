@@ -50,7 +50,7 @@ namespace AIS_Kinoteatr
             this.groupBox1.Controls.Add(this.userNameLable);
             this.groupBox1.Controls.Add(this.pictureBox2);
             this.groupBox1.ForeColor = System.Drawing.Color.White;
-            this.groupBox1.Location = new System.Drawing.Point(471, 12);
+            this.groupBox1.Location = new System.Drawing.Point(455, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(249, 135);
             this.groupBox1.TabIndex = 1;
@@ -155,7 +155,7 @@ namespace AIS_Kinoteatr
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::AIS_Kinoteatr.Properties.Resources._5007;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(732, 390);
+            this.ClientSize = new System.Drawing.Size(716, 390);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);

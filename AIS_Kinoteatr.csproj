@@ -80,6 +80,12 @@
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\ChildForms\AddingClientsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChildForms\AddingClientsForm.Designer.cs">
+      <DependentUpon>AddingClientsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\CinemaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\AuthorizationForm.resx">
       <DependentUpon>AuthorizationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ChildForms\AddingClientsForm.resx">
+      <DependentUpon>AddingClientsForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\CinemaForm.resx">
       <DependentUpon>CinemaForm.cs</DependentUpon>

@@ -7,11 +7,16 @@ namespace AIS_Kinoteatr
 {
     public partial class AssortmentForm : Form
     {
+        private int SelectRow { get; set; }
+        DataGridViewControll gridViewControll;
         public AssortmentForm()
         {
             InitializeComponent();
 
             pictureBox1.Image = Image.FromFile($@"{Application.StartupPath}\FilmsImage\0.jpeg");
+            gridViewControll = new DataGridViewControll();
+
+            gridViewControll.Update(assortmentTable, "Films");
         }
 
         private void Assortment_Load(object sender, EventArgs e)
@@ -23,6 +28,7 @@ namespace AIS_Kinoteatr
         private void AssortmentTable_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             int imageIndex = 0;
+            SelectRow = e.RowIndex;
 
             if (e.RowIndex >= 0 && assortmentTable[0, e.RowIndex].Value.ToString() != "")
             {
@@ -43,13 +49,27 @@ namespace AIS_Kinoteatr
 
         private void update_Click(object sender, EventArgs e)
         {
-            DataGridViewControll gridViewControll = new DataGridViewControll();
             gridViewControll.Update(assortmentTable, "Films");
         }
 
         private void exit_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void delete_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string request = $@"Delete * From Films WHERE код = {assortmentTable[0, SelectRow].Value}";
+                new TableMenager().ExecuteRequest(request);
+
+                gridViewControll.Update(assortmentTable, "Films");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Нельзя удалить", "Внимание!");
+            }
         }
     }
 }
