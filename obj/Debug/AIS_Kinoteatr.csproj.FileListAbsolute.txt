@@ -26,3 +26,4 @@ D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AssortmentForm.resourc
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.ClientsForm.resources
 D:\Serious Projects\AIS_Kinoteatr\bin\Debug\bin\Debug\CinemaDataBase.mdb
 D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.AddingClientsForm.resources
+D:\Serious Projects\AIS_Kinoteatr\obj\Debug\AIS_Kinoteatr.SellingTicketForm.resources

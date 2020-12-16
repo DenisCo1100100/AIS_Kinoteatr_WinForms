@@ -37,6 +37,7 @@ namespace AIS_Kinoteatr
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.sellingTicket = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -88,9 +89,9 @@ namespace AIS_Kinoteatr
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button2.Location = new System.Drawing.Point(49, 31);
+            this.button2.Location = new System.Drawing.Point(12, 27);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(281, 70);
+            this.button2.Size = new System.Drawing.Size(305, 70);
             this.button2.TabIndex = 6;
             this.button2.Text = "Ассортимент";
             this.button2.UseVisualStyleBackColor = false;
@@ -106,9 +107,9 @@ namespace AIS_Kinoteatr
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Location = new System.Drawing.Point(49, 118);
+            this.button4.Location = new System.Drawing.Point(12, 114);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(281, 70);
+            this.button4.Size = new System.Drawing.Size(305, 70);
             this.button4.TabIndex = 7;
             this.button4.Text = "Сотрудники";
             this.button4.UseVisualStyleBackColor = false;
@@ -124,9 +125,9 @@ namespace AIS_Kinoteatr
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button5.Location = new System.Drawing.Point(49, 205);
+            this.button5.Location = new System.Drawing.Point(12, 201);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(281, 70);
+            this.button5.Size = new System.Drawing.Size(305, 70);
             this.button5.TabIndex = 8;
             this.button5.Text = "Клиенты";
             this.button5.UseVisualStyleBackColor = false;
@@ -142,20 +143,39 @@ namespace AIS_Kinoteatr
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(49, 292);
+            this.button1.Location = new System.Drawing.Point(12, 379);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(281, 70);
+            this.button1.Size = new System.Drawing.Size(305, 70);
             this.button1.TabIndex = 9;
             this.button1.Text = "Регистрация";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // sellingTicket
+            // 
+            this.sellingTicket.BackColor = System.Drawing.Color.Transparent;
+            this.sellingTicket.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.sellingTicket.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.sellingTicket.FlatAppearance.BorderSize = 3;
+            this.sellingTicket.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Black;
+            this.sellingTicket.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sellingTicket.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.sellingTicket.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.sellingTicket.Location = new System.Drawing.Point(12, 290);
+            this.sellingTicket.Name = "sellingTicket";
+            this.sellingTicket.Size = new System.Drawing.Size(305, 70);
+            this.sellingTicket.TabIndex = 10;
+            this.sellingTicket.Text = "Продажа билетов";
+            this.sellingTicket.UseVisualStyleBackColor = false;
+            this.sellingTicket.Click += new System.EventHandler(this.sellingTicket_Click);
             // 
             // CinemaForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackgroundImage = global::AIS_Kinoteatr.Properties.Resources._5007;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(716, 390);
+            this.ClientSize = new System.Drawing.Size(716, 465);
+            this.Controls.Add(this.sellingTicket);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
@@ -183,5 +203,6 @@ namespace AIS_Kinoteatr
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button sellingTicket;
     }
 }

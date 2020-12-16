@@ -50,5 +50,10 @@ namespace AIS_Kinoteatr
         {
             new ClientsForm().ShowDialog();
         }
+
+        private void sellingTicket_Click(object sender, EventArgs e)
+        {
+            new SellingTicketForm(Login).ShowDialog();
+        }
     }
 }
